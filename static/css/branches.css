@@ -1,0 +1,15 @@
+body {
+    counter-reset: chapter;
+}
+
+h1 {
+    border-bottom: 2px solid black;
+}
+
+h2 {
+    counter-increment: chapter;
+}
+
+h2::before {
+    content: "Chapter " counter(chapter) ". ";
+}

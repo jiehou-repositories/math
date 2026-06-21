@@ -1,0 +1,14 @@
+body {
+    width: 800px;
+    margin: auto;
+    font-family: Georgia, serif;
+    line-height: 1.6;
+}
+
+h1 {
+    border-bottom: 2px solid black;
+}
+
+a {
+    text-decoration: none;
+}

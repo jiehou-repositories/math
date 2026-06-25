@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>n-fold Cartesian Product of Field</title>
+
+    <link rel="stylesheet" href="../static/css/base.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+<h1>n-fold Cartesian Product of Field</h1>
+
+<h2>Definition</h2>
+
+<div>
+\(\textbf{F}^{n}\) is the set of all tuples of length \(n\) of elements of \(\textbf{F}\).
+</div>
+\[
+    \textbf{F}^{n} = \{(x_{1}, \dots, x_{n})\ |\ x_{1}, \dots, x_{n} \in \textbf{F}\ \text{and}\ n \in \mathbb{Z}^{+}\}.
+\]
+<div>
+    For \(1 \leq i \leq n\) and \(i \in \mathbb{Z}^{+}\), \(x_{i}\) is called the \(i^{\text{th}}\) coordinate of \((x_{1}, \dots, x_{n})\)
+</div>
+
+<h2>Operations</h2>
+<h3>Addition \(+:\ \textbf{F}^{n} \times \textbf{F}^{n} \rightarrow \textbf{F}^{n}\)</h3>
+<div>
+    \(\forall\ (x_{1}, \dots, x_{n}), (y_{1}, \dots, y_{n}) \in \textbf{F}^{n}\),
+    \[
+        (x_{1}, \dots, x_{n}) + (y_{1}, \dots, y_{n}) = (x_{1} + y_{1}, \dots, x_{n} + y_{n}).
+    \]
+</div>
+<h3>Scalar multiplication \(\cdot:\ \textbf{F} \times \textbf{F}^{n} \rightarrow \textbf{F}^{n}\)</h3>
+<div>
+    \(\forall\ \lambda \in \textbf{F}\) and \(\forall\ (x_{1}, \dots, x_{n}) \in \textbf{F}^{n}\),
+    \[
+        \lambda (x_{1}, \dots, x_{n}) = (\lambda x_{1}, \dots, \lambda x_{n}).
+    \]
+</div>
+</body>
+</html>

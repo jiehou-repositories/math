@@ -5,7 +5,7 @@
 
     <title>Linear Algebra Notes</title>
 
-    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="../static/css/base.css">
 
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -15,7 +15,7 @@
 <h1>Vector Spaces</h1>
 
 <h2>Definition of vector spaces</h2>
-<ol>
+<ul>
     <li>
         A set \(V\).
     </li>
@@ -23,61 +23,14 @@
         Functions:
         <ul>
             <li>
-                <b>Addition</b> \(+:\ V \times V \rightarrow V\)
-            </li>
-            <li>
-                <b>Scalar multiplication</b> \(\cdot:\ \mathbb{C} \times V \rightarrow V\)
-            </li>
-        </ul>
-    </li>
-    <li>
-        Conditions:
-        <ul>
-            <li>
-                <b>Commutativity</b>: \(\forall\ \textbf{u}, \textbf{v} \in V,\ +(\textbf{u}, \textbf{v}) = +(\textbf{v}, \textbf{u})\).
-            </li>
-            <li>
-                <b>Associativity</b>: \(\forall\ \textbf{u}, \textbf{v}, \textbf{w} \in V\) and \(\forall\ \lambda, \mu \in \mathbb{C}\), 
-                \(+(+(\textbf{u}, \textbf{v}), \textbf{w}) = +(\textbf{u}, +(\textbf{v}, \textbf{w}))\) and 
-                \(\cdot(\cdot(\lambda, \mu), \textbf{v}) = \cdot(\lambda, \cdot(\mu, \textbf{v}))\).
-            </li>
-            <li>
-                <b>Additive identity</b>: \(\exists\ \textbf{0} \in V\), \(\forall\ \textbf{v} \in V\), \(+(\textbf{v}, \textbf{0}) = \textbf{v}\).
-            </li>
-            <li>
-                <b>Additive inverse</b>: \(\forall\ \textbf{v} \in V\), \(\exists\ \textbf{u} \in V\), \(+(\textbf{v}, \textbf{u}) = \textbf{0}\).
-            </li>
-            <li>
-                <b>Multiplicative identity</b>: \(\forall\ \textbf{v} \in V,\ \cdot(1, \textbf{v}) = \textbf{v}\).
-            </li>
-
-            <li>
-                <b>Distributive properties</b>: \(\forall\ \textbf{u}, \textbf{v} \in V\) and \(\forall\ \lambda, \mu \in \mathbb{C}\), 
-                \(\cdot(\lambda, +(\textbf{u}, \textbf{v})) = +(\cdot(\lambda, \textbf{u}), \cdot(\lambda, \textbf{v}))\) and
-                \(\cdot(+(\lambda, \mu), \textbf{v}) = +(\cdot(\lambda, \textbf{v}), \cdot(\mu, \textbf{v}))\).
-            </li>
-        </ul>
-    </li>
-</ol>
-
-<h2>Common vector spaces</h2>
-<h3>\(\mathbb{R}\)</h3>
-<ol>
-    <li>
-        A set \(\mathbb{R}\).
-    </li>
-    <li>
-        Functions:
-        <ul>
-            <li>
-                <b>Addition</b> \(+:\ (\mathbb{R}, \mathbb{R}) \rightarrow \mathbb{R}\)
+                Addition \(+:\ V \times V \rightarrow V\)
                 <br>
-                \(\forall\ \lambda, \mu \in \mathbb{R}, +(\lambda, \mu) = \lambda + \mu\).
+                \(\forall\ \textbf{u}, \textbf{v} \in V\), \(+(\textbf{u}, \textbf{v}) = \textbf{u} + \textbf{v}\).
             </li>
             <li>
-                <b>Scalar multiplication</b> \(\cdot:\ (\mathbb{C}, V) \rightarrow V\)
+                Scalar multiplication \(\cdot:\ F \times V \rightarrow V\)
                 <br>
-                \(\forall\ \lambda, \mu \in \mathbb{R}, \cdot(\lambda, \mu) = \lambda\mu\).
+                \(\forall\ a \in F\) and \(\forall\ \textbf{v} \in V\), \(\cdot(a, \textbf{v}) = a\cdot\textbf{v} = a\textbf{v}\).
             </li>
         </ul>
     </li>
@@ -85,30 +38,64 @@
         Properties:
         <ul>
             <li>
-                <b>Commutativity</b>: \(\forall\ u, v \in \mathbb{R},\ u + v = v + u\).
+                Commutativity: 
+                <br>
+                \(\forall\ \textbf{u}, \textbf{v} \in V,\ \textbf{u} + \textbf{v} = \textbf{v} + \textbf{u}\).
             </li>
             <li>
-                <b>Associativity</b>: \(\forall\ u, v, w \in \mathbb{R}\) and \(\forall\ \lambda, \mu \in \mathbb{C}\), 
-                \((u + v) + w = u + (v + w)\) and 
-                \((\lambda\mu) u = \lambda(\mu u)\).
+                Associativity: 
+                <br>
+                \(\forall\ \textbf{u}, \textbf{v}, \textbf{w} \in V\), \((\textbf{u} + \textbf{v}) + \textbf{w} = \textbf{u} + (\textbf{v} + \textbf{w})\)
+                <br>
+                \(\forall\ \textbf{v} \in V\) and \(\forall\ a, b \in F\), \((a\cdot_{F} b)\textbf{v} = a(b\textbf{v})\).
             </li>
             <li>
-                <b>Additive identity</b>: \(\exists\ 0 \in \mathbb{R}\), \(\forall\ \lambda \in \mathbb{R}\), \(\lambda + 0 = \lambda\).
+                Additive identity: 
+                <br>
+                \(\exists\ \textbf{0} \in V\), \(\forall\ \textbf{v} \in V\), \(\textbf{v} + \textbf{0} = \textbf{v}\).
             </li>
             <li>
-                <b>Additive inverse</b>: \(\forall\ v \in \mathbb{R}\), \(\exists\ u \in \mathbb{R}\), \(v + u = 0\).
+                Additive inverse: 
+                <br>
+                \(\forall\ \textbf{v} \in V\), \(\exists\ \textbf{u} \in V\), \(\textbf{v} + \textbf{u} = \textbf{0}\).
+                <br>
+                \(\textbf{u} = -\textbf{v}\).
             </li>
             <li>
-                <b>Multiplicative identity</b>: \(\forall\ v \in \mathbb{R},\ 1 \cdot v = v\).
+                Multiplicative identity: 
+                <br>
+                \(\forall\ \textbf{v} \in V\), \(1\cdot \textbf{v} = \textbf{v}\).
             </li>
 
             <li>
-                <b>Distributive properties</b>: \(\forall\ u, v \in \mathbb{R}\) and \(\forall\ \lambda, \mu \in \mathbb{C}\), 
-                \((\lambda + \mu) v = \lambda v + \mu v\) and
-                \(\lambda(u + v) = \lambda u + \lambda v\).
+                Distributive properties: 
+                <br>
+                \(\forall\ a \in F\) and \(\forall\ \textbf{u}, \textbf{v} \in V\), \(a(\textbf{u} + \textbf{v}) = a\textbf{u} + a\textbf{v}\).
+                <br>
+                \(\forall\ a, b \in F\) and \(\forall\ \textbf{v} \in V\), \((a +_{F} b)\textbf{v} = a\textbf{v} + b\textbf{v}\).
             </li>
         </ul>
     </li>
-</ol>
+</ul>
+
+<h2>TBD</h2>
+<h3>Unique additive identity</h3>
+A vector space has a unqiue additive identity.
+
+<h3>Unique additive inverse</h3>
+Every element in a vector space has a unqiue additive inverse.
+
+<h3>The number \(0\) times a vector</h3>
+\(\forall\ \textbf{v} \in V\), \(0 \cdot \textbf{v} = \textbf{0}\).
+
+<h3>A number times the vector \(\textbf{0}\)</h3>
+\(\forall\ a \in F\), \(a \cdot \textbf{0} = \textbf{0}\).
+
+<h3>The number \(-1\) times a vector</h3>
+\(\forall\ \textbf{v} \in V\), \((-1)\cdot\textbf{v} = \textbf{v}\).
+
+<h2>Definition of subspaces</h2>
+A subset \(U\) of a vector space \(V\) is called a subspace of \(V\) if \(U\) is also a vector space.
+
 </body>
 </html>

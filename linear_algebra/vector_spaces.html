@@ -14,7 +14,7 @@
 
 <h1>Vector Spaces</h1>
 
-<h2>Definition of vector spaces</h2>
+<h2>Vector spaces</h2>
 <ul>
     <li>
         A set \(V\).
@@ -78,7 +78,7 @@
     </li>
 </ul>
 
-<h2>TBD</h2>
+<!-- <h2>TBD</h2>
 <h3>Unique additive identity</h3>
 A vector space has a unqiue additive identity.
 
@@ -92,10 +92,56 @@ Every element in a vector space has a unqiue additive inverse.
 \(\forall\ a \in F\), \(a \cdot \textbf{0} = \textbf{0}\).
 
 <h3>The number \(-1\) times a vector</h3>
-\(\forall\ \textbf{v} \in V\), \((-1)\cdot\textbf{v} = \textbf{v}\).
+\(\forall\ \textbf{v} \in V\), \((-1)\cdot\textbf{v} = \textbf{v}\). -->
 
-<h2>Definition of subspaces</h2>
+<h2>Subspaces</h2>
 A subset \(U\) of a vector space \(V\) is called a subspace of \(V\) if \(U\) is also a vector space.
 
+<!-- <h2>TBD: Conditions for a subspace</h2>
+A subset \(U\) of \(V\) is a subspace of \(V\) if and only if \(U\) satisfies the following three conditions:
+<ul>
+    <li>
+        Additive identity: \(\textbf{0} \in U\).
+    </li>
+    <li>
+        Closed under addition: \(\forall\ \textbf{u}, \textbf{w} \in U\), \(\textbf{u} + \textbf{w} \in U\).
+    </li>
+    <li>
+        Closed under scalar multiplication: \(\forall\ a \in F\) and \(\textbf{u} \in U\), \(a\textbf{u} \in U\).
+    </li>
+</ul> -->
+
+<h2>Linear combination</h2>
+\(\forall\ n \in \mathbb{Z}^{+}\), \(\forall\ a_{1}, \dots, a_{n} \in F\), \(\forall\ \textbf{v}_{1}, \dots, \textbf{v}_{n} \in V\), 
+a linear combination of \((\textbf{v}_{1}, \dots, \textbf{v}_{n})\) is a vector of the form \(a_{1}\textbf{v}_{1} + \cdots + a_{n}\textbf{v}_{n}\).
+
+<h2>Span</h2>
+\(\forall\ n \in \mathbb{Z}^{+}\), \(\forall\ \textbf{v}_{1}, \dots, \textbf{v}_{n} \in V\), 
+the set of all linear combinations of \((\textbf{v}_{1}, \dots, \textbf{v}_{n})\) is called the span of
+\((\textbf{v}_{1}, \dots, \textbf{v}_{n})\), denoted \(\text{span}(\textbf{v}_{1}, \dots, \textbf{v}_{n})\). In other words,
+\[
+    \text{span}(\textbf{v}_{1}, \dots, \textbf{v}_{n}) = \{a_{1}\textbf{v}_{1} + \cdots + a_{n}\textbf{v}_{n}\ |\ n \in \mathbb{Z}^{+},\ a_{1}, \dots, a_{n} \in F,\ \textbf{v}_{1}, \dots, \textbf{v}_{n} \in V\}.
+\]
+The span of \(()\) is defined to be \(\{\textbf{0}\}\). 
+<br>
+If \(\text{span}(\textbf{v}_{1}, \dots, \textbf{v}_{n}) = V\), then we say that \((\textbf{v}_{1}, \dots, \textbf{v}_{n})\) spans \(V\).
+<ul>
+    <li>
+        A vector space is called finite-dimensional if there exist some vectors in it that span the space.
+    </li>
+    <li>
+        A vector space is called infinite-dimensional if it is not finite-dimensional.
+    </li>
+</ul>
+
+<h2>Linearly independent and linearly dependent</h2>
+\(\forall\ n \in \mathbb{Z}^{+}\), \(\forall\ \textbf{v}_{1}, \dots, \textbf{v}_{n} \in V\), 
+\((\textbf{v}_{1}, \dots, \textbf{v}_{n})\) is called linearly independent if the only choice of \(a_{1}, \dots, a_{n} \in F\) 
+that makes \(a_{1}\textbf{v}_{1} + \cdots + a_{n}\textbf{v}_{n}\) equal \(\textbf{0}\) is \(a_{1} = \cdots = a_{n} = 0\).
+<br>
+\(\forall\ n \in \mathbb{Z}^{+}\), \(\forall\ \textbf{v}_{1}, \dots, \textbf{v}_{n} \in V\), 
+\((\textbf{v}_{1}, \dots, \textbf{v}_{n})\) is called linearly independent if it is not linearly independent. In other words, 
+\((\textbf{v}_{1}, \dots, \textbf{v}_{n})\) is linearly dependent if \(\exists\ a_{1}, \dots, a_{n} \in F\), not all \(0\), such that
+\(a_{1}\textbf{v}_{1} + \cdots + a_{n}\textbf{v}_{n}\).
 </body>
 </html>

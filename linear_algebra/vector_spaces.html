@@ -140,8 +140,24 @@ If \(\text{span}(\textbf{v}_{1}, \dots, \textbf{v}_{n}) = V\), then we say that 
 that makes \(a_{1}\textbf{v}_{1} + \cdots + a_{n}\textbf{v}_{n}\) equal \(\textbf{0}\) is \(a_{1} = \cdots = a_{n} = 0\).
 <br>
 \(\forall\ n \in \mathbb{Z}^{+}\), \(\forall\ \textbf{v}_{1}, \dots, \textbf{v}_{n} \in V\), 
-\((\textbf{v}_{1}, \dots, \textbf{v}_{n})\) is called linearly independent if it is not linearly independent. In other words, 
+\((\textbf{v}_{1}, \dots, \textbf{v}_{n})\) is called linearly dependent if it is not linearly independent. In other words, 
 \((\textbf{v}_{1}, \dots, \textbf{v}_{n})\) is linearly dependent if \(\exists\ a_{1}, \dots, a_{n} \in F\), not all \(0\), such that
 \(a_{1}\textbf{v}_{1} + \cdots + a_{n}\textbf{v}_{n}\).
+
+<h2>Linearly dependence lemma</h2>
+Suppose \((\textbf{v}_{1}, \dots, \textbf{v}_{n})\) is linearly dependent in \(V\), where \(n \in \mathbb{Z}^{+}\). 
+Then there exists \(i \in \mathbb{Z}^{+}\) and \(1 \leq i \leq n\) such that the following hold:
+<ol>
+    <li>
+        \(v_{i} \in \text{span}(\textbf{v}_{1}, \dots, \textbf{v}_{i - 1})\).
+    </li>
+    <li>
+        \(\text{span}(\textbf{v}_{1}, \dots, \textbf{v}_{n}) = \text{span}(\textbf{v}_{1}, \dots, \textbf{v}_{i - 1}, \textbf{v}_{i + 1}, \dots,\textbf{v}_{n})\).
+    </li>
+</ol>
+
+<h2>TBD</h2>
+In a finite-dimensional vector space, the length of every linearly independent list of vectors is less than or equal to 
+the length of every spanning list of vectors. 
 </body>
 </html>

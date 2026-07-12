@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Linear Maps</title>
+
+    <link rel="stylesheet" href="../static/css/base.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+<h1>Linear Maps</h1>
+
+<h2>Definition of linear maps</h2>
+A linear map from \(V\) to \(W\) is a function \(T: V \rightarrow W\) with the following properties
+<ul>
+    <li>
+        Additivity
+        <br>
+        \(\forall\ \textbf{u}, \textbf{v} \in V\), \(T(\textbf{u} + \textbf{v}) = T\textbf{u} + T\textbf{v}\).
+    </li>
+    <li>
+        Homogeneity
+        <br>
+        \(\forall\ \lambda \in F\) and \(\forall\ \textbf{v} \in V\), \(T(\lambda\textbf{v}) = \lambda(T\textbf{v})\).
+    </li>
+</ul>
+The set of all linear maps from \(V\) to \(W\) is denoted \(\mathcal{L}(V, W)\).
+
+<h2>Existence and uniqueness of linear maps</h2>
+Suppose \(\{\textbf{v}_{1}, \dots, \textbf{v}_{n}\}\) is a basis of \(V\) and \(\forall\ \textbf{w}_{1}, \dots, \textbf{w}_{n} \in W\).
+Then there exists a unqiue linear map \(T: V \rightarrow W\) such that \(T\textbf{v}_{i} = \textbf{w}_{i}\) for \(1 \leq i \leq n\) and \(i \in \mathbb{Z}^{+}\).
+</body>
+</html>

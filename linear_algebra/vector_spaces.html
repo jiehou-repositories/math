@@ -14,7 +14,7 @@
 
 <h1>Vector Spaces</h1>
 
-<h2>Vector spaces</h2>
+<h2>Definition of vector spaces</h2>
 <ul>
     <li>
         A set \(V\).
@@ -94,28 +94,13 @@ Every element in a vector space has a unqiue additive inverse.
 <h3>The number \(-1\) times a vector</h3>
 \(\forall\ \textbf{v} \in V\), \((-1)\cdot\textbf{v} = \textbf{v}\). -->
 
-<h2>Subspaces</h2>
-A subset \(U\) of a vector space \(V\) is called a subspace of \(V\) if \(U\) is also a vector space.
+<h2>Vectors in a vector space</h2>
 
-<!-- <h2>TBD: Conditions for a subspace</h2>
-A subset \(U\) of \(V\) is a subspace of \(V\) if and only if \(U\) satisfies the following three conditions:
-<ul>
-    <li>
-        Additive identity: \(\textbf{0} \in U\).
-    </li>
-    <li>
-        Closed under addition: \(\forall\ \textbf{u}, \textbf{w} \in U\), \(\textbf{u} + \textbf{w} \in U\).
-    </li>
-    <li>
-        Closed under scalar multiplication: \(\forall\ a \in F\) and \(\textbf{u} \in U\), \(a\textbf{u} \in U\).
-    </li>
-</ul> -->
-
-<h2>Linear combination</h2>
+<h3>Linear combination</h3>
 \(\forall\ n \in \mathbb{Z}^{+}\), \(\forall\ a_{1}, \dots, a_{n} \in F\), \(\forall\ \textbf{v}_{1}, \dots, \textbf{v}_{n} \in V\), 
 \(a_{1}\textbf{v}_{1} + \cdots + a_{n}\textbf{v}_{n}\) is called a linear combination of \((\textbf{v}_{1}, \dots, \textbf{v}_{n})\).
 
-<h2>Span</h2>
+<h3>Span</h3>
 \(\forall\ n \in \mathbb{Z}^{+}\), \(\forall\ \textbf{v}_{1}, \dots, \textbf{v}_{n} \in V\), the set of all linear combinations of \(\{\textbf{v}_{1}, \dots, \textbf{v}_{n}\}\) is called the span of
 \(\{\textbf{v}_{1}, \dots, \textbf{v}_{n}\}\), denoted \(\text{span}(\{\textbf{v}_{1}, \dots, \textbf{v}_{n}\})\). In other words,
 \[
@@ -133,7 +118,7 @@ If \(\text{span}(\{\textbf{v}_{1}, \dots, \textbf{v}_{n}\}) = V\), then we say t
     </li>
 </ul>
 
-<h2>Linearly independent and linearly dependent</h2>
+<h3>Linear independence and linear dependence</h3>
 \(\forall\ n \in \mathbb{Z}^{+}\), \(\forall\ \textbf{v}_{1}, \dots, \textbf{v}_{n} \in V\), 
 \(\{\textbf{v}_{1}, \dots, \textbf{v}_{n}\}\) is called linearly independent if the only choice of \(a_{1}, \dots, a_{n} \in F\) 
 that makes \(a_{1}\textbf{v}_{1} + \cdots + a_{n}\textbf{v}_{n}\) equal \(\textbf{0}\) is \(a_{1} = \cdots = a_{n} = 0\).
@@ -143,7 +128,7 @@ that makes \(a_{1}\textbf{v}_{1} + \cdots + a_{n}\textbf{v}_{n}\) equal \(\textb
 \(\{\textbf{v}_{1}, \dots, \textbf{v}_{n}\}\) is linearly dependent if \(\exists\ a_{1}, \dots, a_{n} \in F\), not all \(0\), such that
 \(a_{1}\textbf{v}_{1} + \cdots + a_{n}\textbf{v}_{n}\).
 
-<h2>Linear dependence lemma</h2>
+<h3>Linear dependence lemma</h3>
 Suppose \((\textbf{v}_{1}, \dots, \textbf{v}_{n})\) is linearly dependent in \(V\), where \(n \in \mathbb{Z}^{+}\). 
 Then there exists \(i \in \mathbb{Z}^{+}\) and \(1 \leq i \leq n\) such that the following hold:
 <ol>
@@ -155,12 +140,14 @@ Then there exists \(i \in \mathbb{Z}^{+}\) and \(1 \leq i \leq n\) such that the
     </li>
 </ol>
 
-<h2>Basis</h2>
+<h2>Dimension of a vector space</h2>
+
+<h3>Basis</h3>
 \(\forall\ n \in \mathbb{Z}^{+}\), \(\forall\ \textbf{v}_{1}, \dots, \textbf{v}_{n} \in V\), 
 \(\{\textbf{v}_{1}, \dots, \textbf{v}_{n}\}\) is a basis of \(V\) if 
 \(\{\textbf{v}_{1}, \dots, \textbf{v}_{n}\}\) is linearly independent and \(\text{span}(\{\textbf{v}_{1}, \dots, \textbf{v}_{n}\})\).
 
-<h2>TBD: Criterion of basis</h2>
+<h3>TBD: Criterion of basis</h3>
 \(\forall\ n \in \mathbb{Z}^{+}\), \(\forall\ \textbf{v}_{1}, \dots, \textbf{v}_{n} \in V\), 
 \(\{\textbf{v}_{1}, \dots, \textbf{v}_{n}\}\) is a basis of \(V\) if and only if 
 \(\forall\ \textbf{v} \in V\) can be written uniquely in the form
@@ -169,29 +156,25 @@ Then there exists \(i \in \mathbb{Z}^{+}\) and \(1 \leq i \leq n\) such that the
 \]
 where \(a_{1}, \dots, a_{n} \in F\).
 
-<h2>TBD: Spanning list contains a basis</h2>
-\(\forall\ n \in \mathbb{Z}^{+}\), \(\forall\ \textbf{v}_{1}, \dots, \textbf{v}_{n} \in V\), 
-\(\{\textbf{v}_{1}, \dots, \textbf{v}_{n}\}\) is a basis of \(V\) if and only if 
-\(\forall\ \textbf{v} \in V\) can be written uniquely in the form
-\[
-    \textbf{v} = a_{1}\textbf{v}_{1} + \cdots + a_{n}\textbf{v}_{n},
-\]
-where \(a_{1}, \dots, a_{n} \in F\).
+<h3>Dimension</h3>
+The dimension of a finite-dimensional vector space is the length of any basis of the vector space, denoted by \(\text{dim} V\). 
 
-<h2>TBD</h2>
-In a finite-dimensional vector space, the length of every linearly independent list of vectors is less than or equal to 
-the length of every spanning list of vectors. 
+<h2>Subspaces</h2>
+A subset \(U\) of a vector space \(V\) is called a subspace of \(V\) if \(U\) is also a vector space.
 
-<h2>TBD: Spanning list contains a basis</h2>
-Every spanning list in a vector space can be reduced to a basis of the vector space.
+<!-- <h2>TBD: Conditions for a subspace</h2>
+A subset \(U\) of \(V\) is a subspace of \(V\) if and only if \(U\) satisfies the following three conditions:
+<ul>
+    <li>
+        Additive identity: \(\textbf{0} \in U\).
+    </li>
+    <li>
+        Closed under addition: \(\forall\ \textbf{u}, \textbf{w} \in U\), \(\textbf{u} + \textbf{w} \in U\).
+    </li>
+    <li>
+        Closed under scalar multiplication: \(\forall\ a \in F\) and \(\textbf{u} \in U\), \(a\textbf{u} \in U\).
+    </li>
+</ul> -->
 
-<h2>TBD: Linearly independent list extends to a basis</h2>
-Every linearly independent list of vectors in a finite-dimensional vector space can be extended to a basis of the vector space.
-
-<h2>TBD: Basis length</h2>
-Any two bases of a finite-dimensional vector space have the same length.
-
-<h2>Dimension</h2>
-The dimension of a finite-dimensional vector space is the length of any basis of the vector space, denoted by \(\text{dim} V\).
 </body>
 </html>

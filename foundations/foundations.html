@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Foundations</title>
+
+    <link rel="stylesheet" href="../static/css/base.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+<h1>Foundations</h1>
+
+<h2>Definition of relations</h2>
+
+<div>
+\(\forall\) sets \(X\) and \(Y\), a relation \(R\) between \(X\) and \(Y\) is a subset of \(X \times Y\). 
+<br>
+\(\forall\ x \in X\) and \(\forall\ y \in Y\), \((x, y) \in R\) is denoted as \(x R y\).
+</div>
+
+<h2>Definition of equality relation</h2>
+
+<div>
+The equality relation \(=\) on a set \(S\) is defined by \(\{(x, x)\ |\ x \in S\}\).
+</div>
+
+<h2>Definition of equivalence relation</h2>
+
+<div>
+An equivalence relation \(\sim\) on a set \(S\) is one satisfying following properties:
+<ul>
+    <li>
+        Reflexive:
+        <br>
+        \(\forall\ x \in S\), \(x \sim x\).
+    </li>
+    <li>
+        Symmetric:
+        <br>
+        \(\forall\ x, y \in S\), if \(x \sim y\), then \(y \sim x\).
+    </li>
+    <li>
+        Transitive:
+        <br>
+        \(\forall\ x, y, z \in S\), if \(x \sim y\) and \(y \sim z\), then \(x \sim z\).
+    </li>
+</ul>
+</div>
+
+<h2>Definition of functions</h2>
+
+<div>
+\(\forall\) sets \(X\) and \(Y\), a function \(f\) mapping \(X\) into \(Y\) is a relation between \(X\) and \(Y\) such that
+\(\forall\ x \in X\) and \(\forall\ y_{1}, y_{2} \in Y\), if \(x f y_{1}\) and \(x f y_{2}\), then \(y_{1} = y_{2}\).
+<br>
+\(f\) is also called a map or mapping of \(X\) into \(Y\), denoted as \(f : X \rightarrow Y\). 
+\(\forall\ x \in X\) and \(\forall\ y \in Y\), if \(x f y\), then it is written as \(f(x) = y\).
+<ul>
+    <li>
+        Domain: \(X\) is called the domain of \(f\).
+    </li>
+    <li>
+        Codomain: \(Y\) is called the domain of \(f\).
+    </li>
+    <li>
+        Range: \(f[X] = \{f(x)\ |\ x \in X\}\).
+    </li>
+</ul>
+</div>
+
+<h2>Definition of binary operations</h2>
+
+<div>
+A binary operation \(*\) on a set \(S\) is a function \(* : S \times S \rightarrow S\). 
+\(\forall\ a, b \in S\), \(*(a, b)\) is denoted as \(a * b\). 
+</div>
+
+<h2>Definition of induced operations</h2>
+
+<div>
+For a binary operation \(* : S \times S \rightarrow S\), \(\forall\ H \subseteq S\), 
+\(H\) is closed under \(*\) iff \(\forall\ a, b \in H\), \(a * b \in H\).
+The binary operation on \(H\) given by restrictig \(*\) to \(H\) is the induced operation of \(*\) on \(H\).
+</div>
+
+<h2>Definition of commutative and associative operations</h2>
+
+<div>
+For a binary operation \(* : S \times S \rightarrow S\), \(*\) is commutative iff \(\forall\ a, b \in S\), \(a * b = b * a\).
+<br>
+For a binary operation \(* : S \times S \rightarrow S\), \(*\) is associative iff \(\forall\ a, b, c \in S\), \((a * b) * c = a * (b * c)\).
+</div>
+
+</div>
+</body>
+</html>

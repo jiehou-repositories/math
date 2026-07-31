@@ -107,6 +107,70 @@ If such a map \(f\) exists, then \(S\) and \(S^{\prime}\) are isomorphic binary 
 which we denote by \(S \simeq S^{\prime}\), ommitting the \(*\) and \(*^{\prime}\) from the notation.
 </div>
 
+<h2>Definition of identity element</h2>
+
+<div>
+Let \(\langle S, *\rangle\) be a binary structure. An element \(e\) of \(S\) is an identity element for \(*\) 
+if \(\forall\ s \in S\), \(e * s = s * e = s\).
+</div>
+
+<h2>Uniqueness of identity element</h2>
+
+<div>
+A binary structure \(\langle S, *\rangle\) has at most one identity element. 
+<br>
+<strong><em>Proof.</em></strong>
+<br>
+Suppose \(\langle S, *\rangle\) has identity elements \(e_{1}\) and \(e_{2}\), and \(e_{1} \ne e_{2}\). Then
+<ul>
+    <li>
+        Because \(e_{1}\) is an identity element, there is
+        \[
+            e_{1} * e_{2} = e_{2} * e_{1} = e_{1}.
+        \]
+    </li>
+    <li>
+        Because \(e_{2}\) is an identity element, there is
+        \[
+            e_{2} * e_{1} = e_{1} * e_{2} = e_{2}.
+        \]
+    </li>
+</ul>
+Therefore, \( e_{1} * e_{2} = e_{2} * e_{1} = e_{1} = e_{2}\), which is a contradiction. Hence, \(\langle S, *\rangle\) has at most one identity element. 
+<p style="text-align: right;">\(\blacksquare\)</p>
+</div>
+
+<h2>Identity element of isomorphism</h2>
+
+<div>
+Suppose \(\langle S, *\rangle\) has an identity element \(e\) for \(*\). 
+If \(f : S \rightarrow S^{\prime}\) is an isomorphism of \(\langle S, *\rangle\) with \(\langle S^{\prime}, *^{\prime}\rangle\),
+then \(f(e)\) is an identity element for the binary operation \(*^{\prime}\) on \(S^{\prime}\).
+<br>
+<strong><em>Proof.</em></strong>
+<br>
+Because \(f : S \rightarrow S^{\prime}\) is an isomorphism of \(\langle S, *\rangle\) with \(\langle S^{\prime}, *^{\prime}\rangle\),
+\(\forall\ s^{\prime} \in S^{\prime}\), \(\exists\ s \in S\) such that \(f(s) = s^{\prime}\). Then there are
+\[
+    f(e) *^{\prime} s^{\prime} = f(e) *^{\prime} f(s) = f(e * s),
+\]
+and
+\[
+    s^{\prime} *^{\prime} f(e) = f(s) *^{\prime} f(e) = f(s * e).
+\]
+Because \(e\) is the identity element of \(\langle S, *\rangle\), there is \(e * s = s * e = s\). Therefore,
+\[
+    f(e) *^{\prime} s^{\prime} = f(e * s) = f(s) = s^{\prime},
+\]
+and
+\[
+    s^{\prime} *^{\prime} f(e) = f(s * e) = f(s) = s^{\prime},
+\]
+which means that \(f(e) *^{\prime} s^{\prime} = s^{\prime} *^{\prime} f(e) = s^{\prime}\). 
+Hence, \(f(e)\) is an identity element for the binary operation \(*^{\prime}\) on \(S^{\prime}\).
+<p style="text-align: right;">\(\blacksquare\)</p>
+</div>
+
 </div>
 </body>
 </html>

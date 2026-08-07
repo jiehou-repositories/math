@@ -18,45 +18,43 @@
 
 <div>
 \(\forall\) sets \(X\) and \(Y\), a relation \(R\) between \(X\) and \(Y\) is a subset of \(X \times Y\). 
-<br>
 \(\forall\ x \in X\) and \(\forall\ y \in Y\), \((x, y) \in R\) is denoted as \(x R y\).
-</div>
-
-<h2>Definition of equality relation</h2>
-
-<div>
-The equality relation \(=\) on a set \(S\) is defined by \(\{(x, x)\ |\ x \in S\}\).
-</div>
-
-<h2>Definition of equivalence relation</h2>
-
-<div>
-An equivalence relation \(\sim\) on a set \(S\) is one satisfying following properties:
 <ul>
     <li>
-        Reflexive:
+        Equality relation
         <br>
-        \(\forall\ x \in S\), \(x \sim x\).
+        The equality relation \(=\) on a set \(S\) is defined by \(\{(x, x)\ |\ x \in S\}\).
     </li>
     <li>
-        Symmetric:
+        Equivalence relation
         <br>
-        \(\forall\ x, y \in S\), if \(x \sim y\), then \(y \sim x\).
-    </li>
-    <li>
-        Transitive:
-        <br>
-        \(\forall\ x, y, z \in S\), if \(x \sim y\) and \(y \sim z\), then \(x \sim z\).
+        An equivalence relation \(\sim\) on a set \(S\) is one satisfying following properties:
+        <ul>
+            <li>
+                Reflexive:
+                <br>
+                \(\forall\ x \in S\), \(x \sim x\).
+            </li>
+            <li>
+                Symmetric:
+                <br>
+                \(\forall\ x, y \in S\), if \(x \sim y\), then \(y \sim x\).
+            </li>
+            <li>
+                Transitive:
+                <br>
+                \(\forall\ x, y, z \in S\), if \(x \sim y\) and \(y \sim z\), then \(x \sim z\).
+            </li>
+        </ul>
     </li>
 </ul>
-</div>
+<div>
 
 <h2>Definition of functions</h2>
 
 <div>
 \(\forall\) sets \(X\) and \(Y\), a function \(f\) mapping \(X\) into \(Y\) is a relation between \(X\) and \(Y\) such that
 \(\forall\ x \in X\) and \(\forall\ y_{1}, y_{2} \in Y\), if \(x f y_{1}\) and \(x f y_{2}\), then \(y_{1} = y_{2}\).
-<br>
 \(f\) is also called a map or mapping of \(X\) into \(Y\), denoted as \(f : X \rightarrow Y\). 
 \(\forall\ x \in X\) and \(\forall\ y \in Y\), if \(x f y\), then it is written as \(f(x) = y\).
 <ul>
@@ -64,7 +62,7 @@ An equivalence relation \(\sim\) on a set \(S\) is one satisfying following prop
         Domain: \(X\) is called the domain of \(f\).
     </li>
     <li>
-        Codomain: \(Y\) is called the domain of \(f\).
+        Codomain: \(Y\) is called the codomain of \(f\).
     </li>
     <li>
         Range: \(f[X] = \{f(x)\ |\ x \in X\}\).
@@ -77,8 +75,28 @@ An equivalence relation \(\sim\) on a set \(S\) is one satisfying following prop
 <div>
 A binary operation \(*\) on a set \(S\) is a function \(* : S \times S \rightarrow S\). 
 \(\forall\ a, b \in S\), \(*(a, b)\) is denoted as \(a * b\). 
-<br>
-A binary algebraic structure \(\langle S, *\rangle\) to be a set together with a binary operation \(*\) on \(S\).
+<ul>
+    <li>
+        Commutative binary operation
+        <br>
+        For a binary operation \(* : S \times S \rightarrow S\), \(*\) is commutative iff \(\forall\ a, b \in S\), \(a * b = b * a\).
+    </li>
+    <li>
+        Associative binary operation
+        <br>
+        For a binary operation \(* : S \times S \rightarrow S\), \(*\) is associative iff 
+        \(\forall\ a, b, c \in S\), \((a * b) * c = a * (b * c)\).
+    </li>
+</ul>
+Notations:
+<ul>
+    <li>
+        \(\forall\ a \in S\), \(a = a^{1*} = a^{*1}\).
+    </li>
+    <li>
+        \(\forall\ n \in \mathbb{Z}^{+}\) and \(\forall\ a \in S\), \(a^{(n + 1)*} = a * a^{n*}\) and \(a^{*(n + 1)} = a^{*n} * a\).
+    </li>
+</ul>
 </div>
 
 <h2>Definition of induced operations</h2>
@@ -89,14 +107,6 @@ For a binary operation \(* : S \times S \rightarrow S\), \(\forall\ H \subseteq 
 The binary operation on \(H\) given by restrictig \(*\) to \(H\) is the induced operation of \(*\) on \(H\).
 </div>
 
-<h2>Definition of commutative and associative operations</h2>
-
-<div>
-For a binary operation \(* : S \times S \rightarrow S\), \(*\) is commutative iff \(\forall\ a, b \in S\), \(a * b = b * a\).
-<br>
-For a binary operation \(* : S \times S \rightarrow S\), \(*\) is associative iff \(\forall\ a, b, c \in S\), \((a * b) * c = a * (b * c)\).
-</div>
-
 <h2>Definition of isomorphic binary structures</h2>
 
 <div>
@@ -105,72 +115,6 @@ An isomorphism of \(S\) with \(S^{\prime}\) is a one-to-one function \(f\) mappi
 such that \(\forall\ x, y \in S\), \(f(x * y) = f(x) * f(y)\). 
 If such a map \(f\) exists, then \(S\) and \(S^{\prime}\) are isomorphic binary structures, 
 which we denote by \(S \simeq S^{\prime}\), ommitting the \(*\) and \(*^{\prime}\) from the notation.
-</div>
-
-<h2>Definition of identity element</h2>
-
-<div>
-Let \(\langle S, *\rangle\) be a binary structure. An element \(e\) of \(S\) is an identity element for \(*\) 
-if \(\forall\ s \in S\), \(e * s = s * e = s\).
-</div>
-
-<h2>Uniqueness of identity element</h2>
-
-<div>
-A binary structure \(\langle S, *\rangle\) has at most one identity element. 
-<br>
-<strong><em>Proof.</em></strong>
-<br>
-Suppose \(\langle S, *\rangle\) has identity elements \(e_{1}\) and \(e_{2}\), and \(e_{1} \ne e_{2}\). Then
-<ul>
-    <li>
-        Because \(e_{1}\) is an identity element, there is
-        \[
-            e_{1} * e_{2} = e_{2} * e_{1} = e_{1}.
-        \]
-    </li>
-    <li>
-        Because \(e_{2}\) is an identity element, there is
-        \[
-            e_{2} * e_{1} = e_{1} * e_{2} = e_{2}.
-        \]
-    </li>
-</ul>
-Therefore, \( e_{1} * e_{2} = e_{2} * e_{1} = e_{1} = e_{2}\), which is a contradiction. Hence, \(\langle S, *\rangle\) has at most one identity element. 
-<p style="text-align: right;">\(\blacksquare\)</p>
-</div>
-
-<h2>Identity element of isomorphism</h2>
-
-<div>
-Suppose \(\langle S, *\rangle\) has an identity element \(e\) for \(*\). 
-If \(f : S \rightarrow S^{\prime}\) is an isomorphism of \(\langle S, *\rangle\) with \(\langle S^{\prime}, *^{\prime}\rangle\),
-then \(f(e)\) is an identity element for the binary operation \(*^{\prime}\) on \(S^{\prime}\).
-<br>
-<strong><em>Proof.</em></strong>
-<br>
-Because \(f : S \rightarrow S^{\prime}\) is an isomorphism of \(\langle S, *\rangle\) with \(\langle S^{\prime}, *^{\prime}\rangle\),
-\(\forall\ s^{\prime} \in S^{\prime}\), \(\exists\ s \in S\) such that \(f(s) = s^{\prime}\). Then there are
-\[
-    f(e) *^{\prime} s^{\prime} = f(e) *^{\prime} f(s) = f(e * s),
-\]
-and
-\[
-    s^{\prime} *^{\prime} f(e) = f(s) *^{\prime} f(e) = f(s * e).
-\]
-Because \(e\) is the identity element of \(\langle S, *\rangle\), there is \(e * s = s * e = s\). Therefore,
-\[
-    f(e) *^{\prime} s^{\prime} = f(e * s) = f(s) = s^{\prime},
-\]
-and
-\[
-    s^{\prime} *^{\prime} f(e) = f(s * e) = f(s) = s^{\prime},
-\]
-which means that \(f(e) *^{\prime} s^{\prime} = s^{\prime} *^{\prime} f(e) = s^{\prime}\). 
-Hence, \(f(e)\) is an identity element for the binary operation \(*^{\prime}\) on \(S^{\prime}\).
-<p style="text-align: right;">\(\blacksquare\)</p>
-</div>
-
 </div>
 </body>
 </html>

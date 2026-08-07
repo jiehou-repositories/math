@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Binary Algebraic Structures</title>
+
+    <link rel="stylesheet" href="../static/css/base.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+<h1>Binary Algebraic Structures</h1>
+
+<h2>Definition of binary algebraic structures</h2>
+
+<div>
+A binary algebraic structure \(\langle S, *\rangle\) is a set together with a binary operation \(*\) on \(S\).
+</div>
+
+<h2>Definition of left identity element and right identity element</h2>
+<div>
+\(\forall\) binary algebraic structure \(\langle S, *\rangle\), 
+<ul>
+    <li>
+        \(e \in S\) is called a left identity element of \(S\) iff \(\forall\ a \in S\), \(e * a = a\).
+    </li>
+    <li>
+        \(e \in S\) is called a right identity element of \(S\) iff \(\forall\ a \in S\), \(a * e = a\).
+    </li>
+    <li>
+        \(e \in S\) is called a two-sided identity element of \(S\) iff \(\forall\ a \in S\), \(e * a = a * e = a\).
+    </li>
+</ul>
+</div>
+
+<h2>Uniqueness of two-sided identity element</h2>
+
+<div>
+\(\forall\) binary algebraic structure \(\langle S, *\rangle\) has at most one two-sided identity element. 
+<br>
+<strong><em>Proof.</em></strong>
+<br>
+Suppose \(\exists\ \langle S, *\rangle\) has at least two-sided identity elements \(e_{1}\) and \(e_{2}\), and \(e_{1} \ne e_{2}\). Then
+<ul>
+    <li>
+        Because \(e_{1}\) is a two-sided identity element, there is
+        \[
+            e_{1} * e_{2} = e_{2} * e_{1} = e_{2}.
+        \]
+    </li>
+    <li>
+        Because \(e_{2}\) is a two-sided identity element, there is
+        \[
+            e_{2} * e_{1} = e_{1} * e_{2} = e_{1}.
+        \]
+    </li>
+</ul>
+Therefore, \(e_{1} = e_{2}\), which is a contradiction. 
+Hence, \(\forall\) binary algebraic structure \(\langle S, *\rangle\) has at most one two-sided identity element. 
+<p style="text-align: right;">\(\blacksquare\)</p>
+</div>
+
+<h2>Identity element of isomorphism</h2>
+
+<div>
+Suppose \(\langle S, *\rangle\) has an identity element \(e\) for \(*\). 
+If \(f : S \rightarrow S^{\prime}\) is an isomorphism of \(\langle S, *\rangle\) with \(\langle S^{\prime}, *^{\prime}\rangle\),
+then \(f(e)\) is an identity element for the binary operation \(*^{\prime}\) on \(S^{\prime}\).
+<br>
+<strong><em>Proof.</em></strong>
+<br>
+Because \(f : S \rightarrow S^{\prime}\) is an isomorphism of \(\langle S, *\rangle\) with \(\langle S^{\prime}, *^{\prime}\rangle\),
+\(\forall\ s^{\prime} \in S^{\prime}\), \(\exists\ s \in S\) such that \(f(s) = s^{\prime}\). Then there are
+\[
+    f(e) *^{\prime} s^{\prime} = f(e) *^{\prime} f(s) = f(e * s),
+\]
+and
+\[
+    s^{\prime} *^{\prime} f(e) = f(s) *^{\prime} f(e) = f(s * e).
+\]
+Because \(e\) is the identity element of \(\langle S, *\rangle\), there is \(e * s = s * e = s\). Therefore,
+\[
+    f(e) *^{\prime} s^{\prime} = f(e * s) = f(s) = s^{\prime},
+\]
+and
+\[
+    s^{\prime} *^{\prime} f(e) = f(s * e) = f(s) = s^{\prime},
+\]
+which means that \(f(e) *^{\prime} s^{\prime} = s^{\prime} *^{\prime} f(e) = s^{\prime}\). 
+Hence, \(f(e)\) is an identity element for the binary operation \(*^{\prime}\) on \(S^{\prime}\).
+<p style="text-align: right;">\(\blacksquare\)</p>
+
+<h2>Definition of left inverse and right inverse</h2>
+
+<div>
+\(\forall\) binary algebraic structure \(\langle S, *\rangle\) such that \(\exists\ e \in S \) is the identity element of \(\langle S, *\rangle\).
+</div>
+</div>
+</body>
+</html>

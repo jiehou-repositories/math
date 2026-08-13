@@ -4,3 +4,21 @@ body {
     font-family: 'Computer Modern Sans', serif;
     line-height: 1.5;
 }
+
+table {
+    border-collapse: collapse;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+th, td {
+    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.proofend {
+    text-align: right;
+}

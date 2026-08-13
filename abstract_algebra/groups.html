@@ -17,30 +17,270 @@
 <h2>Definition of groups</h2>
 
 <div>
-A binary algebraic structure \(\langle G, *\rangle\) is a group iff
+\(\forall\) binary algebraic structure \(\langle G, *\rangle\) is a group iff
 <ul>
     <li>
-        Associativity of \(*\)
-        <br>
-        \(\forall\ a, b, c \in G\), \((a * b) * c = a * (b * c)\).
+        \(*\) is associative.
     </li>
     <li>
-        Identity element of \(*\)
-        <br>
-        \(\exists\ e \in G\), \(\forall\ a \in G\), \(e * a = a * e = a\).
+        \(\langle G, *\rangle\) has the identity element.
     </li>
     <li>
-        Inverse in \(*\)
-        <br>
-        \(\forall\ a \in G\), \(\exists\ a^{\prime} \in G\) such that \(a * a^{\prime} = a^{\prime} * a = e\).
+        \(\langle G, *\rangle\) has inverses.
     </li>
 </ul>
 The order of \(\langle G, *\rangle\) is the number of elements in \(G\), which is denoted as \(|G|\).
+<br>
+\(\forall\) group \(\langle G, *\rangle\) is abelian iff \(*\) is commutative.
 </div>
 
-<h2>Definition of abelian groups</h2>
+<h2>Equivalent definitions of groups</h2>
 <div>
-A group \(\langle G, *\rangle\) is abelian if its binary operation is commutative.
+\(\forall\) binary algebraic structure \(\langle G, *\rangle\) such that \(*\) is associative and
+<ol>
+    <li>
+        \(\langle G, *\rangle\) has the identity element and \(\langle G, *\rangle\) has inverses.
+    </li>
+    <li>
+        \(\exists\ e \in G\) is a left identity element of \(\langle G, *\rangle\) and 
+        \(\langle G, *\rangle\) has left inverses based on \(e\).
+    </li>
+    <li>
+        \(\exists\ e \in G\) is a right identity element of \(\langle G, *\rangle\) and 
+        \(\langle G, *\rangle\) has right inverses based on \(e\).
+    </li>
+    <li>
+        \(\exists\ e \in G\) is a left identity element of \(\langle G, *\rangle\) and 
+        \(\langle G, *\rangle\) has right inverses based on \(e\).
+    </li>
+    <li>
+        \(\exists\ e \in G\) is a right identity element of \(\langle G, *\rangle\) and 
+        \(\langle G, *\rangle\) has left inverses based on \(e\).
+    </li>
+</ol>
+There are
+<ul>
+    <li>
+        Condition 1 \(\Leftrightarrow\) Condition 2.
+    </li>
+    <li>
+        Condition 1 \(\Leftrightarrow\) Condition 3.
+    </li>
+    <li>
+        Condition 1 \(\Rightarrow\) Condition 4. Condition 4 \(\nRightarrow\) Condition 1.
+    </li>
+    <li>
+        Condition 1 \(\Rightarrow\) Condition 5. Condition 5 \(\nRightarrow\) Condition 1.
+    </li>
+</ul>
+<strong><em>Proof.</em></strong> 
+<ul>
+    <li>
+        Condition 1 \(\Rightarrow\) Condition 2, Condition 3, Condition 4, Condition 5.
+        <br>
+        Let \(e \in G\) be the identity element of \(\langle G, *\rangle\). \(\forall\ a \in G\), \(e * a = a * e = a\).
+        Therefore, \(e\) is both a left identity element and a right identity element of \(\langle G, *\rangle\). 
+        \(\forall\ a \in G\), \(\exists\ b \in G\), \(b * a = a * b = e\). 
+        Therefore, \(\langle G, *\rangle\) has both left inverses based on \(e\) and right inverses based on \(e\). 
+    </li>
+    <li>
+        Condition 2 \(\Rightarrow\) Condition 1.
+        <br>
+        <ul>
+            <li>
+                The proof that \(\langle G, *\rangle\) has the identity element. 
+                <br>
+                \(\forall\ a \in G\), \(\exists\ b \in G\) such that \(b * a = e\). \(\exists\ c \in G\) such that \(c * b = e\). There are
+                \[
+                    c * (b * a) = c * e,
+                \]
+                and
+                \[
+                    c * (b * a) = (c * b) * a = e * a = a.
+                \]
+                Therefore, \(c * e = a\). Moreover, there are
+                \[
+                    (c * e) * e = a * e,
+                \]
+                and
+                \[
+                    (c * e) * e = c * (e * e) = c * e = a.
+                \]
+                Therefore, \(a * e = a\), and \(e\) is also a right identity element of \(\langle G, *\rangle\). 
+                Hence, \(e\) is the identity element of \(\langle G, *\rangle\). 
+            </li>
+            <li>
+                The proof that \(\langle G, *\rangle\) has inverses.
+                <br> 
+                Because \(e\) is the identity element of \(\langle G, *\rangle\), there is \(c * e = c\).
+                Because \(c * e = a\), there is \(c = a\). Because \(c * b = e\), there is \(a * b = e\). Therefore,
+                \(b * a = a * b = e\). Hence, \(b\) is the inverse of \(a\) and \(\langle G, *\rangle\) has inverses.
+            </li>
+        </ul>
+    </li>
+    <li>
+        Condition 3 \(\Rightarrow\) Condition 1.
+        <br>
+        <ul>
+            <li>
+                The proof that \(\langle G, *\rangle\) has the identity element. 
+                <br>
+                \(\forall\ a \in G\), \(\exists\ b \in G\) such that \(a * b = e\). \(\exists\ c \in G\) such that \(b * c = e\). There are
+                \[
+                    (a * b) * c = e * c,
+                \]
+                and
+                \[
+                    (a * b) * c = a * (b * c) = a * e = a.
+                \]
+                Therefore, \(e * c = a\). Moreover, there are
+                \[
+                    e * (e * c) = e * a,
+                \]
+                and
+                \[
+                    e * (e * c) = (e * e) * c = e * c = a.
+                \]
+                Therefore, \(e * a = a\), and \(e\) is also a left identity element of \(\langle G, *\rangle\). 
+                Hence, \(e\) is the identity element of \(\langle G, *\rangle\). 
+            </li>
+            <li>
+                The proof that \(\langle G, *\rangle\) has inverses.
+                <br> 
+                Because \(e\) is the identity element of \(\langle G, *\rangle\), there is \(e * c = c\).
+                Because \(e * c = a\), there is \(c = a\). Because \(b * c = e\), there is \(b * a = e\). Therefore,
+                \(b * a = a * b = e\). Hence, \(b\) is the inverse of \(a\) and \(\langle G, *\rangle\) has inverses.
+            </li>
+        </ul>
+    </li>
+    <li>
+        Condition 4 \(\nRightarrow\) Condition 1.
+        <br>
+        Let \(G = \{a, e\}\) and the operation \(*\) be
+        <table>
+            <tr>
+                <td>\(*\)</td>
+                <td>\(a\)</td>
+                <td>\(e\)</td>
+            </tr>
+            <tr>
+                <td>\(a\)</td>
+                <td>\(a\)</td>
+                <td>\(e\)</td>
+            </tr>
+            <tr>
+                <td>\(e\)</td>
+                <td>\(a\)</td>
+                <td>\(e\)</td>
+            </tr>
+        </table>
+        There are
+        \[
+            (a * a) * a = a * a = a, \qquad a * (a * a) = a * a = a.
+        \]
+        \[
+            (a * a) * e = a * e = e, \qquad a * (a * e) = a * e = e.
+        \]
+        \[
+            (a * e) * a = e * a = a, \qquad a * (e * a) = a * a = a.
+        \]
+        \[
+            (e * a) * a = a * a = a, \qquad e * (a * a) = e * a = a.
+        \]
+        \[
+            (a * e) * e = e * e = e, \qquad a * (e * e) = a * e = e.
+        \]
+        \[
+            (e * a) * e = a * e = e, \qquad e * (a * e) = e * e = e.
+        \]
+        \[
+            (e * e) * a = e * a = a, \qquad e * (e * a) = e * a = a.
+        \]
+        \[
+            (e * e) * e = e * e = e, \qquad e * (e * e) = e * e = e.
+        \]
+        Therefore, \(*\) is associative. Because \(e * a = a\) and \(e * e = e\), \(e\) is a left identity of \(\langle G, *\rangle\).
+        Because \(a * e = e\), \(e\) is a right inverse of \(a\). Because \(e * e = e\), \(e\) is a right inverse of \(e\). Therefore,
+        \(\langle G, *\rangle\) has right inverses based on \(e\). However, \(e * a = a \ne e = a * e\), 
+        \(e\) is not a right identity of \(\langle G, *\rangle\). \(\langle G, *\rangle\) is not a group.
+    </li>
+    <li>
+        Condition 5 \(\nRightarrow\) Condition 1.
+        <br>
+        Let \(G = \{a, e\}\) and the operation \(*\) be
+        <table>
+            <tr>
+                <td>\(*\)</td>
+                <td>\(a\)</td>
+                <td>\(e\)</td>
+            </tr>
+            <tr>
+                <td>\(a\)</td>
+                <td>\(a\)</td>
+                <td>\(a\)</td>
+            </tr>
+            <tr>
+                <td>\(e\)</td>
+                <td>\(e\)</td>
+                <td>\(e\)</td>
+            </tr>
+        </table>
+        There are
+        \[
+            (a * a) * a = a * a = a, \qquad a * (a * a) = a * a = a.
+        \]
+        \[
+            (a * a) * e = a * e = a, \qquad a * (a * e) = a * a = a.
+        \]
+        \[
+            (a * e) * a = a * a = a, \qquad a * (e * a) = a * e = a.
+        \]
+        \[
+            (e * a) * a = e * a = e, \qquad e * (a * a) = e * a = e.
+        \]
+        \[
+            (a * e) * e = a * e = a, \qquad a * (e * e) = a * e = a.
+        \]
+        \[
+            (e * a) * e = e * e = e, \qquad e * (a * e) = e * a = e.
+        \]
+        \[
+            (e * e) * a = e * a = e, \qquad e * (e * a) = e * e = e.
+        \]
+        \[
+            (e * e) * e = e * e = e, \qquad e * (e * e) = e * e = e.
+        \]
+        Therefore, \(*\) is associative. Because \(a * e = a\) and \(e * e = e\), \(e\) is a right identity of \(\langle G, *\rangle\).
+        Because \(e * a = e\), \(e\) is a left inverse of \(a\). Because \(e * e = e\), \(e\) is a left inverse of \(e\). Therefore,
+        \(\langle G, *\rangle\) has left inverses based on \(e\). However, \(e * a = e \ne a = a * e\), 
+        \(e\) is not a left identity of \(\langle G, *\rangle\). \(\langle G, *\rangle\) is not a group.
+    </li>
+</ul> 
+<p class="proofend">\(\blacksquare\)</p>
+</div>
+
+<h2>Symmetry of groups</h2>
+<div>
+\(\forall\) group \(\langle G, *\rangle\),
+<ul>
+    <li>
+        \(\langle G, *\rangle\) has the identity element.
+    </li>
+    <li>
+        \(\langle G, *\rangle\) has inverses.
+    </li>
+    <li>
+        \(\forall\ n \in \mathbb{Z}^{+}\) and \(\forall\ a \in G\), \(a^{n*} = a^{*n}\), and we denote it as \(a^{n}\).
+    </li>
+</ul> 
+<strong><em>Proof.</em></strong> 
+<ul>
+    <li>
+        Let \(e \in G\) be a left identity element of \(\langle G, *\rangle\). \(\forall\ a \in G\), \(e * a = a\).
+        \(\exists\ b \in G\), \(b * a = e\).
+    </li>
+</ul> 
+<p class="proofend">\(\blacksquare\)</p>
 </div>
 
 <h2>Left and right cancellation laws</h2>
@@ -74,7 +314,7 @@ Because \(\langle G, *\rangle\) is a group, \(\exists\ e \in G\) is the identity
         \]
     </li>
 </ul>
-<p style="text-align: right;">\(\blacksquare\)</p>
+<p class="proofend">\(\blacksquare\)</p>
 </div>
 
 <h2>Unique solution</h2>
@@ -116,7 +356,7 @@ Because \(\langle G, *\rangle\) is a group, \(\exists\ e \in G\) is the identity
         </ul>
     </li>
 </ul>
-<p style="text-align: right;">\(\blacksquare\)</p>
+<p class="proofend">\(\blacksquare\)</p>
 
 <h2>Unique inverse</h2>
 <div>
@@ -128,7 +368,7 @@ Because \(\langle G, *\rangle\) is a group, \(\exists\ e \in G\) is the identity
  Because \(a_{1}^{\prime} * a = e\) and \(a_{2}^{\prime} * a = e\), there is \(a_{1}^{\prime} * a = a_{2}^{\prime} * a\).
  <em>Therefore</em>, \(a_{1}^{\prime} = a_{2}^{\prime}\), which is a contradiction. 
  Hence, \(\forall\ a \in G\), \(\exists !\ a^{\prime} \in G\) is the inverse of \(a\).
-<p style="text-align: right;">\(\blacksquare\)</p>
+<p class="proofend">\(\blacksquare\)</p>
 </div>
 
 <h2>Inverse of the operation</h2>
@@ -147,7 +387,7 @@ and
     = (b^{\prime} * (a^{\prime} * a)) * b = (b^{\prime} * e) * a = b^{\prime} * b = e.
 \]
 Hence, \((a * b)^{\prime} = b^{\prime} * a^{\prime}\).
-<p style="text-align: right;">\(\blacksquare\)</p>
+<p class="proofend">\(\blacksquare\)</p>
 </div>
 
 <h2>Definition of subgroups</h2>
@@ -186,7 +426,7 @@ Hence, \((a * b)^{\prime} = b^{\prime} * a^{\prime}\).
     </li>
 </ul>
 <strong><em>Proof.</em></strong> 
-<p style="text-align: right;">\(\blacksquare\)</p>
+<p class="proofend">\(\blacksquare\)</p>
 
 <h2>Smallest subgroup containing one element</h2>
 <div>
@@ -233,7 +473,7 @@ Hence, \((a * b)^{\prime} = b^{\prime} * a^{\prime}\).
         Hence, \(\langle H, *\rangle\) is the smallest subgroup of \(\langle G, *\rangle\) containing \(a\).
     </li>
 </ul>
-<p style="text-align: right;">\(\blacksquare\)</p>
+<p class="proofend">\(\blacksquare\)</p>
 
 <h2>Definition of cyclic subgroups</h2>
 <div>

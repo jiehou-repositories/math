@@ -259,134 +259,139 @@ There are
 <p class="proofend">\(\blacksquare\)</p>
 </div>
 
-<h2>Symmetry of groups</h2>
+<h2>Unique solutions and inverses</h2>
 <div>
-\(\forall\) group \(\langle G, *\rangle\),
 <ul>
     <li>
-        \(\langle G, *\rangle\) has the identity element.
+        Unique solutions
+        <br>
+        \(\forall\) group \(\langle G, *\rangle\), \(\forall\ a, b \in G\), \(\exists !\ x, y \in G\) such that \(a * x = b\) and \(y * a = b\).
     </li>
     <li>
-        \(\langle G, *\rangle\) has inverses.
-    </li>
-    <li>
-        \(\forall\ n \in \mathbb{Z}^{+}\) and \(\forall\ a \in G\), \(a^{n*} = a^{*n}\), and we denote it as \(a^{n}\).
-    </li>
-</ul> 
-<strong><em>Proof.</em></strong> 
-<ul>
-    <li>
-        Let \(e \in G\) be a left identity element of \(\langle G, *\rangle\). \(\forall\ a \in G\), \(e * a = a\).
-        \(\exists\ b \in G\), \(b * a = e\).
-    </li>
-</ul> 
-<p class="proofend">\(\blacksquare\)</p>
-</div>
-
-<h2>Left and right cancellation laws</h2>
-<div>
-\(\forall\) group \(\langle G, *\rangle\) holds the left and right cancellation laws. 
-<ul>
-    <li>
-        \(\forall\ a, b, c \in G\), if \(a * b = a * c\), then \(b = c\).
-    </li>
-    <li>
-        \(\forall\ a, b, c \in G\), if \(b * a = c * a\), then \(b = c\).
+        Unique inverses
+        <br>
+        \(\forall\) group \(\langle G, *\rangle\), \(\forall\ a \in G\), \(\exists !\ b \in G\) is the inverse of \(a\).
     </li>
 </ul>
 <strong><em>Proof.</em></strong> 
-Because \(\langle G, *\rangle\) is a group, \(\exists\ e \in G\) is the identity element.
-\(\forall\ a \in G\), \(\exists\ a^{\prime} \in G\) such that \(a * a^{\prime} = a^{\prime} * a = e\).
-<br>
+Let \(e \in G\) be the identity element of \(\langle G, *\rangle\).
 <ul>
     <li>
-        \(\forall\ a, b, c \in G\), if \(a * b = a * c\), then there is
-        \[
-            a^{\prime} * (a * b) = a^{\prime} * (a * c) \quad \Rightarrow \quad (a^{\prime} * a) * b = (a^{\prime} * a) * c
-            \quad \Rightarrow \quad e * b = e * c \quad \Rightarrow \quad b = c.
-        \]
-    </li>
-    <li>
-        \(\forall\ a, b, c \in G\), if \(b * a = c * a\), then \(b = c\).
-        \[
-            (b * a) * a^{\prime} = (c * a) * a^{\prime} \quad \Rightarrow \quad b * (a * a^{\prime}) = c * (a * a^{\prime})
-            \quad \Rightarrow \quad b * e = c * e \quad \Rightarrow \quad b = c.
-        \]
-    </li>
-</ul>
-<p class="proofend">\(\blacksquare\)</p>
-</div>
-
-<h2>Unique solution</h2>
-<div>
-\(\forall\) group \(\langle G, *\rangle\), \(\forall\ a, b \in G\), \(\exists !\ x, y \in G\) such that \(a * x = b\) and \(y * a = b\).
-<br>
-<strong><em>Proof.</em></strong> 
-Because \(\langle G, *\rangle\) is a group, \(\exists\ e \in G\) is the identity element.
-<br>
-<ul>
-    <li>
-        Existence
-        <br>
-        \(\forall\ a \in G\), \(\exists\ a^{\prime} \in G\) is an inverse of \(a\). There are
+        Unique solutions
         <ul>
             <li>
-                \(a * (a^{\prime} * b) = (a * a^{\prime}) * b = e * b = b\).
+                Existence
+                <br>
+                \(\forall\ a \in G\), \(\exists\ c \in G\) is an inverse of \(a\).
+                <ul>
+                    <li>
+                        Let \(x = c * b \in G\). There is \(a * x = a * (c * b) = (a * c) * b = e * b = b\).
+                    </li>
+                    <li>
+                        Let \(y = b * c \in G\). There is \(y * a = (b * c) * a = b * (c * a) = b * e = b\).
+                    </li>
+                </ul>
+                Hence, \(\exists\ x = c * b \in G\) such that \(a * x = b\). \(\exists\ y = b * c \in G\) such that \(y * a = b\). 
             </li>
             <li>
-                \((b * a^{\prime}) * a = b * (a^{\prime} * a) = b * e = b\).
-            </li>
-        </ul>
-        Therefore, \(\exists\ x = a^{\prime} * b \in G\) such that \(a * x = b\). \(\exists\ y = b * a^{\prime} \in G\) such that \(y * a = b\). 
-    </li>
-    <li>
-        Uniqueness
-        <br>
-        <ul>
-            <li>
-                Suppose \(\exists\ x_{1}, x_{2} \in G\) such that \(a * x_{1} = b\) and \(a * x_{2} = b\) and \(x_{1} \ne x_{2}\). 
-                Therefore, \(a * x_{1} = a * x_{2}\). According to the left cancellation law, \(x_{1} = x_{2}\), which is a contradiction.
-                Hence, \(\exists !\ x \in G\) such that \(a * x = b\).
-            </li>
-            <li>
-                Suppose \(\exists\ y_{1}, y_{2} \in G\) such that \(y_{1} * a = b\) and \(y_{2} * a = b\) and \(y_{1} \ne y_{2}\). 
-                Therefore, \(y_{1} * a = y_{2} * a\). According to the right cancellation law, \(y_{1} = y_{2}\), which is a contradiction.
-                Hence, \(\exists !\ y \in G\) such that \(y * a = b\).
+                Uniqueness
+                <br>
+                <ul>
+                    <li>
+                        Suppose \(\exists\ x_{1}, x_{2} \in G\) such that \(a * x_{1} = b\) and \(a * x_{2} = b\) and \(x_{1} \ne x_{2}\). 
+                        \(\exists\ c \in G\) is an inverse of \(a\), there are
+                        \[
+                            c * b = c * (a * x_{1}) = (c * a) * x_{1} = e * x_{1} = x_{1},
+                        \]
+                        and
+                        \[
+                            c * b = c * (a * x_{2}) = (c * a) * x_{2} = e * x_{2} = x_{2}.
+                        \]
+                        Therefore, \(x_{1} = x_{2}\), which is a contradiction.
+                    </li>
+                    <li>
+                        Suppose \(\exists\ y_{1}, y_{2} \in G\) such that \(y_{1} * a = b\) and \(y_{2} * a = b\) and \(y_{1} \ne y_{2}\). 
+                        \(\exists\ c \in G\) is an inverse of \(a\), there are
+                        \[
+                            b * c = (y_{1} * a) * c = y_{1} * (a * c) = y_{1} * e = y_{1},
+                        \]
+                        and
+                        \[
+                            b * c = (y_{2} * a) * c = y_{2} * (a * c) = y_{2} * e = y_{2}.
+                        \]
+                        Therefore, \(y_{1} = y_{2}\), which is a contradiction.
+                    </li>
+                </ul>
+                Hence, \(\exists !\ x, y \in G\) such that \(a * x = b\) and \(y * a = b\).
             </li>
         </ul>
     </li>
+    <li>
+        Unique inverses
+        <br>
+        \(\forall\ a \in G\), because \(e \in G\), \(\exists !\ b \in G\) such that \(a * b = e\) and \(b * a = e\).
+        Hence, \(b\) is the unique inverse of \(a\).
+    </li>
 </ul>
 <p class="proofend">\(\blacksquare\)</p>
 
-<h2>Unique inverse</h2>
+<h2>Symmetry in groups</h2>
 <div>
-\(\forall\) group \(\langle G, *\rangle\), \(\forall\ a \in G\), \(\exists !\ a^{\prime} \in G\) is the inverse of \(a\).
+\(\forall\) group \(\langle G, *\rangle\), \(\forall\ n \in \mathbb{Z}^{+}\) and \(\forall\ a \in G\), \(a^{n*} = a^{*n}\).
 <br>
 <strong><em>Proof.</em></strong> 
- \(\forall\ a \in G\), suppose that \(\exists\ a_{1}^{\prime}, a_{2}^{\prime} \in G\) are 
- both inverses of \(a\) and \(a_{1}^{\prime} \ne a_{2}^{\prime}\). Let \(e \in G\) be the identity element of \(\langle G, *\rangle\).
- Because \(a_{1}^{\prime} * a = e\) and \(a_{2}^{\prime} * a = e\), there is \(a_{1}^{\prime} * a = a_{2}^{\prime} * a\).
- <em>Therefore</em>, \(a_{1}^{\prime} = a_{2}^{\prime}\), which is a contradiction. 
- Hence, \(\forall\ a \in G\), \(\exists !\ a^{\prime} \in G\) is the inverse of \(a\).
+The proof is based on mathematical induction.
+<ol>
+    <li>
+        For \(n = 1\), there is \(a = a^{1*} = a^{*1}\).
+    </li>
+    <li>
+        For \(n = 2\), there is \(a^{2*} = a * a^{1*} = a * a = a^{*1} * a = a^{*2}\).
+    </li>
+    <li>
+        \(\forall\ k \in \mathbb{Z}^{+}\) and \(k \geq 2\), for \(n = k\), suppose that there is \(a^{k*} = a^{*k}\).
+    </li>
+    <li>
+        For \(n = k + 1\), there is
+        \[
+            a^{(k + 1)*} = a * a^{k*} = a * a^{*k} = a * (a^{*(k - 1)} * a) = (a * a^{*(k - 1)}) * a = (a * a^{(k - 1)*}) * a
+            = a^{k*} * a = a^{*k} * a = a^{*(k + 1)}.
+        \]
+    </li>
+</ol>
+Hence, \(\forall\ n \in \mathbb{Z}^{+}\) and \(\forall\ a \in G\), \(a^{n*} = a^{*n}\).
 <p class="proofend">\(\blacksquare\)</p>
+</div>
+
+<h2>Notations in groups</h2>
+<div>
+<ul>
+    <li>
+        \(\forall\) group \(\langle G, *\rangle\), \(\forall\ a \in G\), the inverse of \(a\) is denoted as \(a^{-1}\).
+    </li>
+    <li>
+        \(\forall\) group \(\langle G, *\rangle\), \(\forall\ n \in \mathbb{Z}^{+}\) and \(\forall\ a \in G\), 
+        \(a^{n*}\) and \(a^{*n}\) is denoted as \(a^{n}\). The inverse of \(a^{n}\) is denoted as \(a^{-n}\).
+    </li>
+</ul>
 </div>
 
 <h2>Inverse of the operation</h2>
 <div>
-\(\forall\) group \(\langle G, *\rangle\), \(\forall\ a, b \in G\), \((a * b)^{\prime} = b^{\prime} * a^{\prime}\).
+\(\forall\) group \(\langle G, *\rangle\), \(\forall\ a, b \in G\), \((a * b)^{-1} = b^{-1} * a^{-1}\).
 <br>
 <strong><em>Proof.</em></strong> 
-\(\forall\) group \(\langle G, *\rangle\), suppose \(e \in G\) is the identity element of \(\langle G, *\rangle\). There are
+\(\forall\) group \(\langle G, *\rangle\), let \(e \in G\) be the identity element of \(\langle G, *\rangle\). There are
 \[
-    (a * b) * (b^{\prime} * a^{\prime}) = ((a * b) * b^{\prime}) * a^{\prime} 
-    = (a * (b * b^{\prime})) * a^{\prime} = (a * e) * a^{\prime} = a * a^{\prime} = e,
+    (a * b) * (b^{-1} * a^{-1}) = ((a * b) * b^{-1}) * a^{-1} 
+    = (a * (b * b^{-1})) * a^{-1} = (a * e) * a^{-1} = a * a^{-1} = e,
 \]
 and
 \[
-    (b^{\prime} * a^{\prime}) * (a * b) = ((b^{\prime} * a^{\prime}) * a) * b
-    = (b^{\prime} * (a^{\prime} * a)) * b = (b^{\prime} * e) * a = b^{\prime} * b = e.
+    (b^{-1} * a^{-1}) * (a * b) = ((b^{-1} * a^{-1}) * a) * b
+    = (b^{-1} * (a^{-1} * a)) * b = (b^{-1} * e) * a = b^{-1} * b = e.
 \]
-Hence, \((a * b)^{\prime} = b^{\prime} * a^{\prime}\).
+Hence, \((a * b)^{-1} = b^{-1} * a^{-1}\).
 <p class="proofend">\(\blacksquare\)</p>
 </div>
 

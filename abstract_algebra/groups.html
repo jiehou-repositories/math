@@ -271,6 +271,7 @@ There are
         Unique inverses
         <br>
         \(\forall\) group \(\langle G, *\rangle\), \(\forall\ a \in G\), \(\exists !\ b \in G\) is the inverse of \(a\).
+        \(b\) is denoted as \(a^{-1}\).
     </li>
 </ul>
 <strong><em>Proof.</em></strong> 
@@ -335,45 +336,210 @@ Let \(e \in G\) be the identity element of \(\langle G, *\rangle\).
 </ul>
 <p class="proofend">\(\blacksquare\)</p>
 
-<h2>Symmetry in groups</h2>
+<h2>Rules of combining powers in groups</h2>
 <div>
-\(\forall\) group \(\langle G, *\rangle\), \(\forall\ n \in \mathbb{Z}^{+}\) and \(\forall\ a \in G\), \(a^{n*} = a^{*n}\).
-<br>
-<strong><em>Proof.</em></strong> 
-The proof is based on mathematical induction.
-<ol>
-    <li>
-        For \(n = 1\), there is \(a = a^{1*} = a^{*1}\).
-    </li>
-    <li>
-        For \(n = 2\), there is \(a^{2*} = a * a^{1*} = a * a = a^{*1} * a = a^{*2}\).
-    </li>
-    <li>
-        \(\forall\ k \in \mathbb{Z}^{+}\) and \(k \geq 2\), for \(n = k\), suppose that there is \(a^{k*} = a^{*k}\).
-    </li>
-    <li>
-        For \(n = k + 1\), there is
-        \[
-            a^{(k + 1)*} = a * a^{k*} = a * a^{*k} = a * (a^{*(k - 1)} * a) = (a * a^{*(k - 1)}) * a = (a * a^{(k - 1)*}) * a
-            = a^{k*} * a = a^{*k} * a = a^{*(k + 1)}.
-        \]
-    </li>
-</ol>
-Hence, \(\forall\ n \in \mathbb{Z}^{+}\) and \(\forall\ a \in G\), \(a^{n*} = a^{*n}\).
-<p class="proofend">\(\blacksquare\)</p>
-</div>
-
-<h2>Notations in groups</h2>
-<div>
+\(\forall\) group \(\langle G, *\rangle\), \(\forall\ a \in G\), 
 <ul>
     <li>
-        \(\forall\) group \(\langle G, *\rangle\), \(\forall\ a \in G\), the inverse of \(a\) is denoted as \(a^{-1}\).
+        \(\forall\ n \in \mathbb{Z}^{+}\) and \(a^{n*} = a^{*n}\).
+        <br>
+        Both \(a^{n*}\) and \(a^{*n}\) are denoted as \(a^{n}\). The inverse of \(a^{n}\) is denoted as \(a^{-n}\). 
+        Let \(a^{0}\) denote the identity element of \(\langle G, *\rangle\).
     </li>
     <li>
-        \(\forall\) group \(\langle G, *\rangle\), \(\forall\ n \in \mathbb{Z}^{+}\) and \(\forall\ a \in G\), 
-        \(a^{n*}\) and \(a^{*n}\) is denoted as \(a^{n}\). The inverse of \(a^{n}\) is denoted as \(a^{-n}\).
+        \(\forall\ m, n \in \mathbb{Z}\), \(a^{m} * a^{n} = a^{m + n}\) and \(a^{m} * a^{n} = a^{n} * a^{m}\).
+    </li>
+    <li>
+        \(\forall\ m, n \in \mathbb{Z}\), \((a^{m})^{n} = a^{mn}\) and \((a^{m})^{n} = (a^{n})^{m}\).
     </li>
 </ul>
+<strong><em>Proof.</em></strong> 
+<ul>
+    <li>
+        The proof is based on mathematical induction.
+        <ol>
+            <li>
+                For \(n = 1\), there is \(a = a^{1*} = a^{*1}\).
+            </li>
+            <li>
+                For \(n = 2\), there is \(a^{2*} = a * a^{1*} = a * a = a^{*1} * a = a^{*2}\).
+            </li>
+            <li>
+                \(\forall\ k \in \mathbb{Z}^{+}\) and \(k \geq 2\), for \(n = k\), suppose that there is \(a^{k*} = a^{*k}\).
+            </li>
+            <li>
+                For \(n = k + 1\), there is
+                \[
+                    a^{(k + 1)*} = a * a^{k*} = a * a^{*k} = a * (a^{*(k - 1)} * a) = (a * a^{*(k - 1)}) * a = (a * a^{(k - 1)*}) * a
+                    = a^{k*} * a = a^{*k} * a = a^{*(k + 1)}.
+                \]
+            </li>
+        </ol>
+        Hence, \(\forall\ n \in \mathbb{Z}^{+}\), \(a^{n*} = a^{*n}\).
+    </li>
+    <li>
+        \(\exists\ e \in \langle G, *\rangle\) is the identity element of \(\langle G, *\rangle\). 
+        <ul>
+            <li>
+                This proof is based on mathematical induction and proves the case \(\forall\ m, n \in \mathbb{Z}^{+}\),
+                <ol>
+                    <li>
+                        For \(n = 1\), there is \(a^{m} * a = a^{*m} * a = a^{*(m + 1)} = a^{m + 1}\). 
+                    </li>
+                    <li>
+                        \(\forall\ k \in \mathbb{Z}^{+}\), for \(n = k\), suppose that there is \(a^{m} * a^{k} = a^{m + k}\).
+                    </li>
+                    <li>
+                        For \(n = k + 1\), there is
+                        \[
+                            a^{m} * a^{k + 1} = a^{m} * (a^{k} * a) = (a^{m} * a^{k}) * a = a^{m + k} * a = a^{(m + k) + 1} = a^{m + (k + 1)}.
+                        \]
+                    </li>
+                </ol>
+                Therefore, \(\forall\ m, n \in \mathbb{Z}^{+}\), \(a^{m} * a^{n} = a^{m + n}\). 
+            </li>
+            <li>
+                This proof proves the case \(\forall\ m \in \mathbb{Z}\) and \(n = 0\). There is 
+                \[
+                    a^{m} * a^{n} = a^{m} * a^{0} = a^{m} * e = a^{m} = a^{m + 0} = a^{m + n}.
+                \]
+                
+            </li>
+            <li>
+                This proof proves the case \(m = 0\) and \(\forall\ n \in \mathbb{Z}\). There is 
+                \[
+                    a^{m} * a^{n} = a^{0} * a^{n} = e * a^{n} = a^{n} = a^{0 + n} = a^{m + n}.
+                \]
+            </li>
+            <li>
+                This proof proves the case \(\forall\ m \in \mathbb{Z}^{-}\) and \(\forall\ n \in \mathbb{Z}^{+}\), 
+                <ul>
+                    <li>
+                        If \(m + n > 0\), because \(m + n > 0\) and \(-m > 0\), then there is
+                        \[
+                            a^{-m} * a^{m + n} = a^{-m + (m + n)} = a^{n}.
+                        \]
+                        Therefore, 
+                        \[
+                            a^{m} * a^{n} = a^{m} * (a^{-m} * a^{m + n}) = (a^{m} * a^{-m}) * a^{m + n} = e * a^{m + n} = a^{m + n}.
+                        \]
+                    </li>
+                    <li>
+                        If \(m + n = 0\), because \(m = -n\), then there is
+                        \[
+                            a^{m} * a^{n} = a^{-n} * a^{n} = e = a^{0} = a^{m + n}.
+                        \]
+                    </li>
+                    <li>
+                        If \(m + n < 0\), because \(-(m + n) > 0\) and \(n > 0\), then there is
+                        \[
+                            a^{n} * a^{-(m + n)} = a^{n -(m + n)} = a^{-m}.
+                        \]
+                        Then, 
+                        \[
+                            e = a^{m} * a^{-m} = a^{m} * \left(a^{n} * a^{-(m + n)}\right) = (a^{m} * a^{n}) * a^{-(m + n)}.
+                        \]
+                        Therefore, \(a^{m} * a^{n}\) is the inverse of \(a^{-(m + n)}\), which is \(a^{m + n}\).
+                    </li>
+                </ul>
+            </li>
+            <li>
+                This proof proves the case \(\forall\ m \in \mathbb{Z}^{+}\) and \(\forall\ n \in \mathbb{Z}^{-}\), 
+                <ul>
+                    <li>
+                        If \(m + n > 0\), because \(m + n > 0\) and \(-n > 0\), then there is
+                        \[
+                            a^{m + n} * a^{-n} = a^{(m + n) - n} = a^{m}.
+                        \]
+                        Therefore, 
+                        \[
+                            a^{m} * a^{n} = (a^{m + n} * a^{-n}) * a^{n} = a^{m + n} * (a^{-n} * a^{n}) = a^{m + n} * e = a^{m + n}.
+                        \]
+                    </li>
+                    <li>
+                        If \(m + n = 0\), because \(m = -n\), then there is
+                        \[
+                            a^{m} * a^{n} = a^{-n} * a^{n} = e = a^{0} = a^{m + n}.
+                        \]
+                    </li>
+                    <li>
+                        If \(m + n < 0\), because \(-(m + n) > 0\) and \(m > 0\), then there is
+                        \[
+                            a^{-(m + n)} * a^{m} = a^{-(m + n) + m} = a^{-n}.
+                        \]
+                        Then, 
+                        \[
+                            e = a^{-n} * a^{n} = \left(a^{-(m + n)} * a^{m}\right) * a^{n} = a^{-(m + n)} * (a^{m} * a^{n}).
+                        \]
+                        Therefore, \(a^{m} * a^{n}\) is the inverse of \(a^{-(m + n)}\), which is \(a^{m + n}\).
+                    </li>
+                </ul>
+            </li>
+            <li>
+                This proof proves the case \(\forall\ m \in \mathbb{Z}^{-}\) and \(\forall\ n \in \mathbb{Z}^{-}\).
+                Because \(-m > 0\) and \(-n > 0\), there is
+                \[
+                    a^{-n} * a^{-m} = a^{-n - m} = a^{-(n + m)} = a^{-(m + n)}.
+                \]
+                Then,
+                \[
+                    e = a^{m} * a^{-m} = (a^{m} * e) * a^{-m} = \left(a^{m} * (a^{n} * a^{-n})\right) * a^{-m} = 
+                    \left((a^{m} * a^{n}) * a^{-n}\right) * a^{-m} = (a^{m} * a^{n}) * (a^{-n} * a^{-m}) = (a^{m} * a^{n}) * a^{-(m + n)}.
+                \]
+                Therefore, \(a^{m} * a^{n}\) is the inverse of \(a^{-(m + n)}\), which is \(a^{m + n}\).
+            </li>
+        </ul>
+        To sum up, \(\forall\ m, n \in \mathbb{Z}\), \(a^{m} * a^{n} = a^{m + n}\). Then
+        \[
+            a^{m} * a^{n} = a^{m + n} = a^{n + m} = a^{n} * a^{m}.
+        \]
+        Hence, \(\forall\ n \in \mathbb{Z}^{+}\), \(a^{m} * a^{n} = a^{n} * a^{m}\).
+    </li>
+    <li>
+        \(\exists\ e \in \langle G, *\rangle\) is the identity element of \(\langle G, *\rangle\). 
+        <ul>
+            <li>
+                This proof is based on mathematical induction and proves the case \(\forall\ m \in \mathbb{Z}\) and \(\forall\ n \in \mathbb{Z}^{+}\),
+                <ol>
+                    <li>
+                        For \(n = 1\), there is \((a^{m})^{1} = a^{m} = a^{m \cdot 1}\).
+                    </li>
+                    <li>
+                        \(\forall\ k \in \mathbb{Z}^{+}\), for \(n = k\), suppose that there is \((a^{m})^{k} = a^{mk}\).
+                    </li>
+                    <li>
+                        For \(n = k + 1\), there is
+                        \[
+                            (a^{m})^{k + 1} = (a^{m})^{k} * a^{m} = (a^{mk}) * a^{m} = a^{mk + m} = a^{m(k + 1)}.
+                        \]
+                    </li>
+                </ol>
+            </li>
+            <li>
+                This proof is based on mathematical induction and proves the case \(\forall\ m \in \mathbb{Z}\) and \(\forall\ n = 0\).
+                There is
+                \[
+                    (a^{m})^{n} = (a^{m})^{0} = e = a^{0} = a^{m \cdot 0} = a^{mn}.
+                \]
+            </li>
+            <li>
+                This proof proves the case \(\forall\ m \in \mathbb{Z}\) and \(\forall\ n \in \mathbb{Z}^{-}\).
+                Because \(-n > 0\), there is
+                \[
+                    (a^{m})^{-n} = a^{m(-n)} = a^{-mn}.
+                \]
+                Then, \((a^{m})^{-n}\) is the inverse of \(a^{mn}\). In addition, \((a^{m})^{-n}\) is also the inverse of \((a^{m})^{n}\).
+                Therefore, \((a^{m})^{n} = (a^{m})^{-n}\).
+            </li>
+        </ul>
+        To sum up, \(\forall\ m, n \in \mathbb{Z}\), \((a^{m})^{n} = a^{mn}\). Then
+        \[
+            (a^{m})^{n} = a^{mn} = a^{nm} = (a^{n})^{m}.
+        \]
+        Hence, \(\forall\ m, n \in \mathbb{Z}\), \((a^{m})^{n} = (a^{n})^{m}\).
+    </li>
+</ul>
+<p class="proofend">\(\blacksquare\)</p>
 </div>
 
 <h2>Inverse of the operation</h2>

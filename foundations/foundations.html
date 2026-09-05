@@ -53,9 +53,9 @@
 <h2>Definition of functions</h2>
 
 <div>
-\(\forall\) sets \(X\) and \(Y\), a function \(f\) mapping \(X\) into \(Y\) is a relation between \(X\) and \(Y\) such that
+\(\forall\) sets \(X\) and \(Y\), a function \(f\) from \(X\) to \(Y\) is a relation between \(X\) and \(Y\) such that
 \(\forall\ x \in X\) and \(\forall\ y_{1}, y_{2} \in Y\), if \(x f y_{1}\) and \(x f y_{2}\), then \(y_{1} = y_{2}\).
-\(f\) is also called a map or mapping of \(X\) into \(Y\), denoted as \(f : X \rightarrow Y\). 
+\(f\) is also called a map or mapping from \(X\) to \(Y\), denoted as \(f : X \rightarrow Y\). 
 \(\forall\ x \in X\) and \(\forall\ y \in Y\), if \(x f y\), then it is written as \(f(x) = y\).
 <ul>
     <li>
@@ -66,6 +66,20 @@
     </li>
     <li>
         Range: \(f[X] = \{f(x)\ |\ x \in X\}\).
+    </li>
+</ul>
+Injective, surjective and bijective functions:
+<ul>
+    <li>
+        Injective function: \(f : X \rightarrow Y\) is called an injective function iff 
+        \(\forall\ x_{1}, x_{2} \in X\), if \(x_{1} \ne x_{2}\), then \(f(x_{1}) \ne f(x_{2})\).
+    </li>
+    <li>
+        Surjective function: \(f : X \rightarrow Y\) is called an surjective function iff 
+        \(\forall\ y \in Y\), \(\exists\ x \in X\), \(f(x) = y\), which is also \(f[X] = Y\).
+    </li>
+    <li>
+        Bijective function: \(f : X \rightarrow Y\) is called an bijective function iff \(f\) is both injective and surjective.
     </li>
 </ul>
 </div>

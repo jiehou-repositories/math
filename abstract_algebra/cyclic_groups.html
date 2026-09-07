@@ -37,22 +37,44 @@ Let \(g \in G\) be a generator of \(\langle G, *\rangle\). \(\forall\ a, b \in G
 Hence, \(*\) is communicative. \(\forall\) cyclic group \(\langle G, *\rangle\) is abelian.
 <p class="proofend">\(\blacksquare\)</p>
 
-<h2>Isomorphism of cyclic groups</h2>
+<h2>Finite and infinite cyclic groups</h2>
 <div>
 <ul>
     <li>
-        \(\forall\) infinite cyclic group \(\langle G, *\rangle\) is isomorphic to \(\langle \mathbb{Z}, +\rangle\). 
-    </li>
-    <li>
         \(\forall\ n \in \mathbb{Z}^{+}\), \(\forall\) finite cyclic group \(\langle G, *\rangle\) with order \(n\) is 
         isomorphic to \(\langle \mathbb{Z}_{n}, +_{n}\rangle\). 
+    </li>
+    <li>
+        \(\forall\) infinite cyclic group \(\langle G, *\rangle\), \(\exists\ g \in G\) is a generator of \(\langle G, *\rangle\).
+        \(\forall\ a \in G\), \(\exists !\ n \in \mathbb{Z}\), \(a = g^{n}\). 
+    </li>
+    <li>
+        \(\forall\) infinite cyclic group \(\langle G, *\rangle\) is isomorphic to \(\langle \mathbb{Z}, +\rangle\). 
     </li>
 </ul>
 <strong><em>Proof.</em></strong> 
 <ul>
     <li>
         \(\forall\) infinite cyclic group \(\langle G, *\rangle\), \(\exists\ g \in G\) is a generator of \(\langle G, *\rangle\).
-        Let \(f: G \rightarrow \mathbb{Z}\) defined as \(\forall\ a \in G\), \(\exists\ n \in \mathbb{Z}\), 
+        Suppose \(\exists\ a \in G\), \(\exists\ n_{1}, n_{2} \in \mathbb{Z}\), \(n_{1} < n_{2}\) and \(a = g^{n_{1}} = g^{n_{2}}\).
+        Let \(S = \{g^{n_{1}}, g^{n_{1} + 1}, \cdots, g^{{n_{2} - 1}}\}\). \(\forall\ \Delta \in \mathbb{N}\), there is
+        \[
+            a = g^{n_{1}} = g^{n_{2}}\quad \Rightarrow \quad g^{n_{1} + \Delta} = g^{n_{1}} * g^{\Delta} = g^{n_{2}} * g^{\Delta} = g^{n_{2} + \Delta}.
+        \]
+        <ul>
+            <li>
+                If \(0 \leq \Delta \leq n_{2} - n_{1} - 1\), then \(n_{1} \leq n_{1} + \Delta \leq n_{2} - 1\) and
+                \(n_{2} \leq n_{2} + \Delta \leq 2n_{2} - n_{2} - 1\). Therefore, \(g^{n_{2} + \Delta} = g^{n_{1} + \Delta} \in S\).
+            </li>
+            <li>
+                If \(\Delta \geq n_{2} - n_{1}\), then \(n_{1} \leq n_{1} + \Delta \leq n_{2} - 1\) and
+                \(n_{2} \leq n_{2} + \Delta \leq 2n_{2} - n_{2} - 1\). Therefore, \(g^{n_{2} + \Delta} = g^{n_{1} + \Delta} \in S\).
+            </li>
+        </ul>
+    </li>
+    <li>
+        \(\forall\) infinite cyclic group \(\langle G, *\rangle\), \(\exists\ g \in G\) is a generator of \(\langle G, *\rangle\).
+        Let \(f: G \rightarrow \mathbb{Z}\) defined as \(\forall\ a \in G\), \(\exists !\ n \in \mathbb{Z}\), 
         \(a = g^{n}\), there is \(f(a) = n\).
         <ul>
             <li>

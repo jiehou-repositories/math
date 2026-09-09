@@ -20,6 +20,11 @@
 <div>
 \(\forall\) group \(\langle G, *\rangle\), \(\forall\ H \subseteq G\) and \(H\) is closed under \(*\), 
 \(\langle H, *\rangle\) is a subgroup of \(\langle G, *\rangle\) iff \(\langle H, *\rangle\) is a group.
+<br>
+\(\langle H, *\rangle\) is a subgroup of \(\langle G, *\rangle\) is denoted as \(\langle H, *\rangle \leq \langle G, *\rangle\).
+<br>
+\(\langle H, *\rangle\) is a subgroup of \(\langle G, *\rangle\) and \(H \ne G\) is denoted as \(\langle H, *\rangle < \langle G, *\rangle\).
+\(\langle H, *\rangle\) is called a proper subgroup of \(\langle G, *\rangle\).
 <ul>
     <li>
         \(\langle G, *\rangle\) is the improper subgroup of \(\langle G, *\rangle\).
@@ -38,19 +43,37 @@
 
 <h2>Conditions of subgroups</h2>
 <div>
-\(\forall\) group \(\langle G, *\rangle\), \(\forall\ H \subseteq G\), \(\langle H, *\rangle\) is a subgroup of \(\langle G, *\rangle\) iff
+\(\forall\) group \(\langle G, *\rangle\), \(\forall\ H \subseteq G\) and \(H\) is closed under \(*\), 
+\(\langle H, *\rangle \leq \langle G, *\rangle\) iff \(e \in H\) and \(\forall\ a \in H\), \(a^{-1} \in H\).
+<br>
+<strong><em>Proof.</em></strong> 
 <ul>
     <li>
-        \(H\) is closed under \(*\).
+        \(\langle H, *\rangle \leq \langle G, *\rangle\quad \Rightarrow\quad e \in H\) and \(\forall\ a \in H\), \(a^{-1} \in H\).
+        <br>
+        Suppose \(g \in H\) is the identity element of \(\langle H, *\rangle\) and \(g \ne e\). There is \(g * g = g\).
+        Because \(H \subseteq G\) and \(g \in H\), \(g \in G\), then \(g^{-1} \in G\). There is
+        \[
+            g * g = g\quad \Rightarrow\quad g^{-1} * (g * g) = g^{-1} * g\quad \Rightarrow\quad (g^{-1} * g) * g = g^{-1} * g
+            \quad \Rightarrow\quad e * g = e\quad \Rightarrow\quad g = e.
+        \]
+        This is a contradiction. Therefore, the identity element of \(\langle H, *\rangle\) is \(e\). 
+        Because \(\langle H, *\rangle\) is also a group, \(\forall\ a \in H\), \(\exists\ b \in H\) such that \(a * b = e\).
+        Because \(H \subseteq G\) and \(a \in H\), \(a \in G\), then \(a^{-1} \in G\). There is
+        \[
+            a * b = e\quad \Rightarrow\quad a^{-1} * (a * b) = a^{-1} * e\quad \Rightarrow\quad (a^{-1} * a) * b = a^{-1} 
+            \quad \Rightarrow\quad e * b = a^{-1}\quad \Rightarrow\quad b = a^{-1}.
+        \]
+        Therefore, \(a^{-1} \in H\).
     </li>
     <li>
-        \(e \in H\).
-    </li>
-    <li>
-        \(\forall\ a \in H\), \(a^{-1}\) is in \(H\).
+        \(\langle H, *\rangle \leq \langle G, *\rangle\quad \Leftarrow\quad e \in H\) and \(\forall\ a \in H\), \(a^{-1} \in H\).
+        <br>
+        \(\forall\ a \in H\), because \(H \subseteq G\) and \(a \in H\), \(a \in G\). There are \(a * e = a\) and \(e * a = a\).
+        Therefore, \(e\) is the identity element of \(\langle H, *\rangle\). Because \(a^{-1} \in H\), \(\langle H, *\rangle\) has inverses.
+        In addition, \(\forall\ H \subseteq G\) and \(H\) is closed under \(*\). Therefore, \(\langle H, *\rangle \leq \langle G, *\rangle\).
     </li>
 </ul>
-<strong><em>Proof.</em></strong> 
 <p class="proofend">\(\blacksquare\)</p>
 
 <h2>Smallest subgroup containing one element</h2>

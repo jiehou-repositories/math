@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Foundations</title>
+
+    <link rel="stylesheet" href="../static/css/base.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+<h1>Functions</h1>
+
+<h2>Definition of functions</h2>
+
+<div>
+\(\forall\) sets \(A\) and \(B\), a function \(f\) from \(A\) to \(B\) is a relation between \(A\) and \(B\) such that
+\(\forall\ a \in A\) and \(\forall\ b_{1}, b_{2} \in B\), if \(a f b_{1}\) and \(a f b_{2}\), then \(b_{1} = b_{2}\).
+\(f\) is also called a map or mapping from \(A\) to \(B\), denoted as \(f : A \rightarrow B\). 
+\(\forall\ a \in A\) and \(\forall\ b \in B\), if \(a f b\), then it is written as \(f(a) = b\).
+<ul>
+    <li>
+        Domain: \(A\) is called the domain of \(f\).
+    </li>
+    <li>
+        Codomain: \(B\) is called the codomain of \(f\).
+    </li>
+    <li>
+        Range: \(f[A] = \{f(a)\ |\ a \in A\}\).
+    </li>
+</ul>
+Injective, surjective and bijective functions:
+<ul>
+    <li>
+        Injective function: \(f : A \rightarrow B\) is called an injective function iff 
+        \(\forall\ a_{1}, a_{2} \in A\), if \(a_{1} \ne a_{2}\), then \(f(a_{1}) \ne f(a_{2})\).
+    </li>
+    <li>
+        Surjective function: \(f : A \rightarrow B\) is called an surjective function iff 
+        \(\forall\ b \in B\), \(\exists\ a \in A\), \(f(a) = b\), which is also \(f[A] = B\).
+    </li>
+    <li>
+        Bijective function: \(f : A \rightarrow B\) is called an bijective function iff \(f\) is both injective and surjective.
+    </li>
+</ul>
+</div>
+
+<h2>Definition of binary operations</h2>
+
+<div>
+A binary operation \(*\) on a set \(S\) is a function \(* : S \times S \rightarrow S\). 
+\(\forall\ a, b \in S\), \(*(a, b)\) is denoted as \(a * b\). 
+<ul>
+    <li>
+        Commutative binary operation
+        <br>
+        For a binary operation \(* : S \times S \rightarrow S\), \(*\) is commutative iff \(\forall\ a, b \in S\), \(a * b = b * a\).
+    </li>
+    <li>
+        Associative binary operation
+        <br>
+        For a binary operation \(* : S \times S \rightarrow S\), \(*\) is associative iff 
+        \(\forall\ a, b, c \in S\), \((a * b) * c = a * (b * c)\).
+    </li>
+</ul>
+Notations:
+<ul>
+    <li>
+        \(\forall\ a \in S\), \(a = a^{1*} = a^{*1}\).
+    </li>
+    <li>
+        \(\forall\ n \in \mathbb{Z}^{+}\) and \(\forall\ a \in S\), \(a^{(n + 1)*} = a * a^{n*}\) and \(a^{*(n + 1)} = a^{*n} * a\).
+    </li>
+</ul>
+</div>
+</body>
+</html>

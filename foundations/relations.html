@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Relations</title>
+
+    <link rel="stylesheet" href="../static/css/base.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+<h1>Relations</h1>
+
+<h2>Definition of binary relations</h2>
+
+<div>
+<ol>
+    <li>
+        \(\forall\) sets \(A\) and \(B\), a binary relation \(R\) between \(A\) and \(B\) is a subset of \(A \times B\). 
+        \(\forall\ a \in A\) and \(\forall\ b \in B\), \((a, b) \in R\) is denoted as \(a R b\).
+    </li>
+    <li>
+        \(\forall\) set \(S\), a binary relation \(R\) on \(S\) is a subset of \(S \times S\).
+    </li>
+</ol>
+</div>
+
+<h2>Definition of equivalence relations</h2>
+
+<div>
+\(\forall\) set \(S\), a binary relation \(R\) on \(S\) is an equivalence relation on \(S\) iff
+<ul>
+    <li>
+        Reflexive:
+        <br>
+        \(\forall\ a \in S\), \(aRa\).
+    </li>
+    <li>
+        Symmetric:
+        <br>
+        \(\forall\ a, b \in S\), if \(aRb\), then \(bRa\).
+    </li>
+    <li>
+        Transitive:
+        <br>
+        \(\forall\ a, b, c \in S\), if \(aRb\) and \(bRc\), then \(aRc\).
+    </li>
+</ul>
+An equivalence relation is denoted as \(\sim\).
+<br>
+\(\forall\ a \in S\), the equivalence class of \(a\) on \(\sim\) is a set \(E_{\sim}(a)\) defined as \(\{x\ |\ x \sim a, x \in S\}\).
+\(\forall\ x \in E_{\sim}(a)\) is equivalent to \(a\) and \(x\) is called a representative of \(E_{\sim}(a)\).
+</div>
+
+<h2>Equivalence class in equivalence relation</h2>
+
+<div>
+\(\forall\) set \(S\), \(\forall\) equivalence relation \(\sim\) on \(S\), \(\forall\ a, b \in S\), 
+if \(a \sim b\), then \(E_{\sim}(a) = E_{\sim}(b)\).
+<br>
+<strong><em>Proof.</em></strong>
+<ul>
+    <li>
+        The following proves that \(E_{\sim}(a) \subseteq E_{\sim}(b)\).
+        <br>
+        \(\forall\ x \in E_{\sim}(a)\), \(x \sim a\). Because \(a \sim b\), \(x \sim b\), \(x \in E_{\sim}(b)\).
+    </li>
+    <li>
+        The following proves that \(E_{\sim}(b) \subseteq E_{\sim}(a)\).
+        <br>
+        \(\forall\ x \in E_{\sim}(b)\), \(x \sim b\). Because \(a \sim b\), \(b \sim a\), \(x \sim a\), \(x \in E_{\sim}(a)\).
+    </li>
+</ul>
+Hence, \(E_{\sim}(a) = E_{\sim}(b)\).
+<p class="proofend">\(\blacksquare\)</p>
+</div>
+
+<h2>Equivalence relation and partition</h2>
+
+<div>
+\(\forall\) nonempty set \(S\),
+<ul>
+    <li>
+        \(\forall\) equivalence relation \(\sim\) on \(S\), \(\{E_{\sim}(x)\ |\ x \in S\}\) is a partition of \(S\).
+    </li>
+    <li>
+        \(\forall\) partition \(\{S_{i}\ |\ i \in I\}\) of \(S\), where \(I\) is an index set, 
+        \(\exists\) equivalence relation \(\sim\) on \(S\), \(\{E_{\sim}(x)\ |\ x \in S\} = \{S_{i}\ |\ i \in I\}\).
+    </li>
+</ul>
+<strong><em>Proof.</em></strong>
+<ul>
+    <li>
+        <ul>
+            <li>
+                \(\forall\ E \in \{E_{\sim}(x)\ |\ x \in S\}\), \(\exists\ a \in S\), \(E = E_{\sim}(a)\). 
+                Because \(\sim\) is an equivalence relation, \(a \sim a\). Therefore, \(a \in E\), \(E \ne \varnothing\).
+            </li>
+            <li>
+                \(\forall\ a \in S\), because \(\sim\) is an equivalence relation, \(a \sim a\). 
+                Then, \(a \in E_{\sim}(a)\). Because \(E_{\sim}(a) \in \{E_{\sim}(x)\ |\ x \in S\}\), 
+                \(E_{\sim}(a) \subseteq \bigcup_{x \in S}E_{\sim}(x)\). Therefore, \(a \in \bigcup_{x \in S}E_{\sim}(x)\).
+            </li>
+            <li>
+                \(\forall\ E_{1}, E_{2} \in \{E_{\sim}(x)\ |\ x \in S\}\), 
+                \(\exists\ x_{1}, x_{2} \in S\), \(E_{1} = E_{\sim}(x_{1})\) and \(E_{2} = E_{\sim}(x_{2})\). 
+                If \(E_{1} \ne E_{2}\), then \(\exists\ y \in E_{2}\), \((y, x_{1}) \notin \sim\).
+                Suppose that \(E_{1} \cap E_{2} \ne \varnothing\), \(\exists\ z \in E_{1} \cap E_{2}\).
+                <ul>
+                    <li>
+                        Because \(z \in E_{1}\), \(z \sim x_{1}\), \(x_{1} \sim z\). 
+                        \(\forall\ y_{1} \in E_{1}\), \(y_{1} \sim x_{1}\), \(y_{1} \sim z\).
+                    </li>
+                    <li>
+                        Because \(z \in E_{2}\), \(z \sim x_{2}\), \(x_{2} \sim z\). 
+                        \(\forall\ y_{2} \in E_{2}\), \(y_{2} \sim x_{1}\), \(y_{2} \sim z\), \(z \sim y_{2}\).
+                    </li>
+                </ul>
+                Because \(y_{1} \sim z\) and \(z \sim y_{2}\), \(y_{1} \sim y_{2}\). 
+                Because \(x_{1} \in E_{1}\) and \(y \in E_{2}\), \(x_{1} \sim y\), \(y \sim x_{1}\),
+                which contradicts \((y, x_{1}) \notin \sim\). Therefore, \(E_{1} \cap E_{2} = \varnothing\).
+            </li>
+        </ul>
+        To sum up, \(\{E_{\sim}(x)\ |\ x \in S\}\) is a partition of \(S\).
+    </li>
+    <li>
+        Define a binary relation \(R\) on \(S\) as the following way: \(\forall\ x, y \in S\), 
+        because \(\{S_{i}\ |\ i \in I\}\) is a partition of \(S\), \(\exists\ i, j \in I\), \(x \in S_{i}\) and \(y \in S_{j}\).
+        Then \(xRy\) iff \(i = j\).
+        <ol>
+            <li>
+                The following proves that the relation is well-defined.
+                <br>
+                \(\forall\ x, y \in S\), because \(\{S_{i}\ |\ i \in I\}\) is a partition of \(S\), 
+                \(\exists !\ i, j \in I\), \(x \in S_{i}\) and \(y \in S_{j}\). 
+                Therefore, either \(i = j\) or \(i \ne j\).
+            </li>
+            <li>
+                The following proves that \(R\) is an equivalence relation \(\sim\) on \(S\).
+                <ul>
+                    <li>
+                        Reflexive:
+                        <br>
+                        \(\forall\ x \in S\), because \(\{S_{i}\ |\ i \in I\}\) is a partition of \(S\), \(\exists !\ i \in I\), \(x \in S_{i}\).
+                        Because \(i = i\), there is \(xRx\).
+                    </li>
+                    <li>
+                        Symmetric:
+                        <br>
+                        \(\forall\ x, y \in S\), because \(\{S_{i}\ |\ i \in I\}\) is a partition of \(S\), 
+                        \(\exists !\ i, j \in I\), \(x \in S_{i}\) and \(y \in S_{j}\). If \(xRy\), then \(i = j\).
+                        Then \(j = i\), there is \(yRx\).
+                    </li>
+                    <li>
+                        Transitive:
+                        <br>
+                        \(\forall\ x, y, z \in S\), because \(\{S_{i}\ |\ i \in I\}\) is a partition of \(S\), 
+                        \(\exists !\ i, j, k \in I\), \(x \in S_{i}\), \(y \in S_{j}\) and \(z \in S_{k}\). 
+                        If \(xRy\) and \(yRz\), then \(i = j\) and \(j = k\). Therefore, \(i = k\), there is \(xRz\).
+                    </li>
+                </ul>
+                Therefore, \(R\) is an equivalence relation \(\sim\) on \(S\).
+            </li>
+            <li>
+                The following proves that \(\{E_{\sim}(x)\ |\ x \in S\} = \{S_{i}\ |\ i \in I\}\).
+                <ul>
+                    <li>
+                        The following proves that \(\{E_{\sim}(x)\ |\ x \in S\} \subseteq \{S_{i}\ |\ i \in I\}\).
+                        <br>
+                        \(\forall\ E \in \{E_{\sim}(x)\ |\ x \in S\}\), \(\exists\ x \in S\), \(E = E_{\sim}(x)\).
+                        Because \(\{S_{i}\ |\ i \in I\}\) is a partition of \(S\), \(\exists !\ i \in I\), \(x \in S_{i}\).
+                        The following proves that \(E_{\sim}(x) = S_{i}\). 
+                        <ul>
+                            <li>
+                                The following proves that \(E_{\sim}(x) \subseteq S_{i}\).
+                                <br>
+                                \(\forall\ y \in E_{\sim}(x)\), \(y \in S\) and \(y \sim x\). 
+                                Because \(\{S_{i}\ |\ i \in I\}\) is a partition of \(S\), \(\exists !\ j \in I\), \(y \in S_{j}\).
+                                Because \(y \sim x\), \(j = i\). Therefore, \(y \in S_{i}\), \(E_{\sim}(x) \subseteq S_{i}\).
+                            </li>
+                            <li>
+                                The following proves that \(S_{i} \subseteq E_{\sim}(x)\).
+                                <br>
+                                \(\forall\ y \in S_{i}\), because \(i = i\), \(y \sim x\). 
+                                Therefore, \(y \in E_{\sim}(x)\), \(S_{i} \subseteq E_{\sim}(x)\).
+                            </li>
+                        </ul>
+                        To sum up, \(E_{\sim}(x) = S_{i}\). 
+                        Because \(E = E_{\sim}(x)\), \(E = S_{i}\). Because \(S_{i} \in \{S_{i}\ |\ i \in I\}\), 
+                        \(E \in \{S_{i}\ |\ i \in I\}\), \(\{E_{\sim}(x)\ |\ x \in S\} \subseteq \{S_{i}\ |\ i \in I\}\).
+                    </li>
+                    <li>
+                        The following proves that \(\{S_{i}\ |\ i \in I\} \subseteq \{E_{\sim}(x)\ |\ x \in S\}\).
+                        <br>
+                        \(\forall\ S_{i} \in \{S_{i}\ |\ i \in I\}\), where \(i \in I\), \(\exists\ x \in S_{i}\).
+                        Because \(S_{i} \subseteq S\), \(x \in S\), \(E_{\sim}(x) = \{y\ |\ y \sim x, y \in S\}\).
+                        The following proves that \(S_{i} = E_{\sim}(x)\).
+                        <ul>
+                            <li>
+                                The following proves that \(S_{i} \subseteq E_{\sim}(x)\). 
+                                <br>
+                                \(\forall\ y \in S_{i}\), because \(i = i\), \(y \sim x\). 
+                                Therefore, \(y \in E_{\sim}(x)\), \(S_{i} \subseteq E_{\sim}(x)\).
+                            </li>
+                            <li>
+                                The following proves that \(E_{\sim}(x) \subseteq S_{i}\).
+                                <br>
+                                \(\forall\ y \in E_{\sim}(x)\), \(y \in S\) and \(y \sim x\). 
+                                Because \(\{S_{i}\ |\ i \in I\}\) is a partition of \(S\), \(\exists !\ j \in I\), \(y \in S_{j}\).
+                                Because \(y \sim x\), \(j = i\). Therefore, \(y \in S_{i}\), \(E_{\sim}(x) \subseteq S_{i}\).
+                            </li>
+                        </ul> 
+                        To sum up, \(S_{i} = E_{\sim}(x)\). Because \(E_{\sim}(x) \in \{E_{\sim}(x)\ |\ x \in S\}\),
+                        \(S_{i} \in \{E_{\sim}(x)\ |\ x \in S\}\), \(\{S_{i}\ |\ i \in I\} \subseteq \{E_{\sim}(x)\ |\ x \in S\}\).
+                    </li>
+                </ul>
+                To sum up, \(\{E_{\sim}(x)\ |\ x \in S\} = \{S_{i}\ |\ i \in I\}\).
+            </li>
+        </ol>
+    </li>
+</ul>
+<p class="proofend">\(\blacksquare\)</p>
+</div>
+
+</body>
+</html>

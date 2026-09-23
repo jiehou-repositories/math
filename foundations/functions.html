@@ -32,20 +32,59 @@
         Range: \(f[A] = \{f(a)\ |\ a \in A\}\).
     </li>
 </ul>
-Injective, surjective and bijective functions:
+Common types of functions:
 <ul>
     <li>
-        Injective function: \(f : A \rightarrow B\) is called an injective function iff 
+        Injective function: \(\forall\) sets \(A\) and \(B\), \(f : A \rightarrow B\) is called an injective function iff 
         \(\forall\ a_{1}, a_{2} \in A\), if \(a_{1} \ne a_{2}\), then \(f(a_{1}) \ne f(a_{2})\).
     </li>
     <li>
-        Surjective function: \(f : A \rightarrow B\) is called an surjective function iff 
+        Surjective function: \(\forall\) sets \(A\) and \(B\), \(f : A \rightarrow B\) is called an surjective function iff 
         \(\forall\ b \in B\), \(\exists\ a \in A\), \(f(a) = b\), which is also \(f[A] = B\).
     </li>
     <li>
-        Bijective function: \(f : A \rightarrow B\) is called an bijective function iff \(f\) is both injective and surjective.
+        Bijective function: \(\forall\) sets \(A\) and \(B\), \(f : A \rightarrow B\) is called an bijective function iff \(f\) is both injective and surjective.
+    </li>
+    <li>
+        Identity function: \(\forall\) set \(A\), \(f : A \rightarrow A\) is called the identity function on \(A\) iff \(\forall\ a \in A\), \(f(a) = a\).
     </li>
 </ul>
+</div>
+
+<h2>Definition of composite functions</h2>
+<div>
+    \(\forall\) sets \(A\), \(B\) and \(C\), \(\forall\) function \(f : A \rightarrow B\) and \(\forall\) \(g : B \rightarrow C\),
+    a function \(h : A \rightarrow C\) is the composite function \(g\) of \(f\) iff \(\forall\ a \in A\), \(h(a) = g(f(a))\). 
+    \(h\) is denoted as \(g \circ f\).
+    <ul>
+        <li>
+            Left inverse: \(\forall\) sets \(A\) and \(B\), \(f : A \rightarrow B\) has a left inverse iff
+            \(\exists\ g : B \rightarrow A\), \(g \circ f\) is the identity function on \(A\).
+        </li>
+        <li>
+            Right inverse: \(\forall\) sets \(A\) and \(B\), \(f : A \rightarrow B\) has a right inverse iff
+            \(\exists\ g : B \rightarrow A\), \(f \circ g\) is the identity function on \(B\).
+        </li>
+    </ul>
+</div>
+
+<h2>Conditions of injection, surjection and bijection</h2>
+<div>
+    \(\forall\) sets \(A\) and \(B\), \(\forall\) function \(f : A \rightarrow B\),
+    <ul>
+        <li>
+            \(f\) is injective iff \(f\) has a left inverse.
+        </li>
+        <li>
+            \(f\) is surjective iff \(f\) has a right inverse.
+        </li>
+        <li>
+            \(f\) is injective iff \(f\) has both a left inverse and a right inverse.
+        </li>
+        <li>
+            If \(A\) and \(B\) are finite sets and \(|A| = |B|\), then \(f\) is injective iff \(f\) is surjective.
+        </li>
+    </ul>
 </div>
 
 <h2>Definition of binary operations</h2>

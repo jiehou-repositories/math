@@ -70,21 +70,132 @@ Common types of functions:
 
 <h2>Conditions of injection, surjection and bijection</h2>
 <div>
-    \(\forall\) sets \(A\) and \(B\), \(\forall\) function \(f : A \rightarrow B\),
-    <ul>
-        <li>
-            \(f\) is injective iff \(f\) has a left inverse.
-        </li>
-        <li>
-            \(f\) is surjective iff \(f\) has a right inverse.
-        </li>
-        <li>
-            \(f\) is injective iff \(f\) has both a left inverse and a right inverse.
-        </li>
-        <li>
-            If \(A\) and \(B\) are finite sets and \(|A| = |B|\), then \(f\) is injective iff \(f\) is surjective.
-        </li>
-    </ul>
+\(\forall\) sets \(A\) and \(B\), \(\forall\) function \(f : A \rightarrow B\),
+<ul>
+    <li>
+        \(f\) is injective iff \(f\) has a left inverse.
+    </li>
+    <li>
+        \(f\) is surjective iff \(f\) has a right inverse.
+    </li>
+    <li>
+        \(f\) is injective iff \(f\) has both a left inverse and a right inverse.
+    </li>
+    <li>
+        If \(A\) and \(B\) are finite sets and \(|A| = |B|\), then \(f\) is injective iff \(f\) is surjective.
+    </li>
+</ul>
+<strong><em>Proof.</em></strong>
+<ul>
+    <li>
+        <ul>
+            <li>
+                The following proves that \(f\) is injective \(\Rightarrow\) \(f\) has a left inverse.
+                <br>
+                Define a function \(g : B \rightarrow A\) as the following way: 
+                Because \(A \ne \varnothing\), \(\exists\ x \in A\). \(\forall\ b \in B\), 
+                if \(\exists\ a \in A\) such that \(f(a) = b\), then \(g(b) = a\); otherwise, 
+                if \(\nexists\ a \in A\) such that \(f(a) = b\), then \(g(b) = x\).
+                <ul>
+                    <li>
+                        The following proves that \(g\) is well-defined.
+                        <br>
+                        Because \(f\) is injective, if \(\exists\ a \in A\) such that \(f(a) = b\), 
+                        then \(\forall\ c \in A\), if \(c \ne a\), then \(f(c) \ne b\). Therefore, \(g(b)\) is uniquely determined.
+                    </li>
+                    <li>
+                        The following proves that \(f\) has a left inverse.
+                        <br>
+                        \(\forall\ a \in A\), \(\exists\ b \in B\), \(f(a) = b\).  Then \(g(b) = a\), and
+                        \((g \circ f)(a) = g(f(a)) = g(b) = a\). Therefore, \(g \circ f\) is the identity function on \(A\),
+                        which means that \(f\) has a left inverse.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                The following proves that \(f\) has a left inverse \(\Rightarrow\) \(f\) is injective.
+                <br>
+                Because \(f\) has a left inverse, \(\exists\ g : B \rightarrow A\), \(g \circ f\) is the identity function on \(A\).
+                \(\forall\ a \in A\), \((g \circ f)(a) = g(f(a)) = a\). 
+                Suppose that \(f\) is not injective. \(\exists\ a_{1}, a_{2} \in A\), \(a_{1} \ne a_{2}\) and \(f(a_{1}) = f(a_{2})\).
+                Then, \((g \circ f)(a_{1}) = g(f(a_{1})) = a_{1}\), \((g \circ f)(a_{2}) = g(f(a_{2})) = a_{2}\).
+                \(\exists\ b \in B\), \(f(a_{1}) = f(a_{2}) = b\). Therefore, \(g(b) = a_{1}\) and \(g(b) = a_{2}\),
+                which contradicts \(a_{1} \ne a_{2}\). Therefore, \(f\) is injective.
+            </li>
+        </ul>
+        To sum up, \(f\) is injective iff \(f\) has a left inverse.
+    </li>
+    <li>
+        <ul>
+            <li>
+                The following proves that \(f\) is surjective \(\Rightarrow\) \(f\) has a right inverse.
+                <br>
+                Define a function \(g : B \rightarrow A\) as the following way: 
+                \(\forall\ b \in B\), \(\exists\ a \in A\) such that \(f(a) = b\), \(g(b) = a\).
+                <ul>
+                    <li>
+                        The following proves that \(g\) is well-defined.
+                        <br>
+                        Because \(f\) is surjective, \(\forall\ b \in B\), \(\exists\ a \in A\) such that \(f(a) = b\).
+                    </li>
+                    <li>
+                        The following proves that \(f\) has a right inverse.
+                        <br>
+                        \(\forall\ b \in B\), \(\exists\ a \in A\), \(f(a) = b\). Then \(g(b) = a\), and
+                        \((f \circ g)(b) = f(g(b)) = f(a) = b\). Therefore, \(f \circ g\) is the identity function on \(B\),
+                        which means that \(f\) has a right inverse.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                The following proves that \(f\) has a right inverse \(\Rightarrow\) \(f\) is surjective.
+                <br>
+                Because \(f\) has a right inverse, \(\exists\ g : B \rightarrow A\), \(f \circ g\) is the identity function on \(B\).
+                \(\forall\ b \in B\), \((f \circ g)(b) = f(g(b)) = b\). 
+                Suppose that \(f\) is not surjective. \(\exists\ b_{0} \in B\), \(\nexists\ a \in A\) such that \(f(a) = b_{0}\).
+                Then, \((f \circ g)(b_{0}) = f(g(b_{0})) = b_{0}\). \(\exists\ a_{0} \in A\), \(g(b_{0}) = a_{0}\). Then,
+                \(f(g(b_{0})) = f(a_{0}) = b_{0}\), which is a contradiction. Therefore, \(f\) is surjective.
+            </li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li>
+                The following proves that \(f\) is bijective \(\Rightarrow\) \(f\) has both a left inverse and a right inverse.
+                <br>
+                Because \(f\) is bijective, \(f\) is both injective and surjective. 
+                Because \(f\) is injective, \(f\) has a left inverse. Because \(f\) is surjective, \(f\) has a right inverse. 
+            </li>
+            <li>
+                The following proves that \(f\) has both a left inverse and a right inverse \(\Rightarrow\) \(f\) is bijective.
+                <br>
+                Because \(f\) has a left inverse, \(f\) is injective. Because \(f\) has a right inverse, \(f\) is surjective. 
+                Because \(f\) is both injective and surjective, \(f\) is bijective.
+            </li>
+        </ul>
+    </li>
+    <li>
+        Because \(|A| = |B|\), let \(|A| = |B| = n\) and \(A = \{a_{1}, \cdots, a_{n}\}\), 
+        \(B = \{b_{1}, \cdots, b_{n}\}\), where \(n \in \mathbb{Z}^{+}\).
+        <ul>
+            <li>
+                The following proves that \(f\) is injective \(\Rightarrow\) \(f\) is surjective.
+                <br>
+                Because \(f\) is injective, \(\forall\ x, y \in A\), if \(x \ne y\), then \(f(x) \ne f(y)\).
+                Because \(|A| = n\), \(|f[A]| = n\). Therefore, \(|f[A]| = |B| = n\), \(f\) is surjective.
+            </li>
+            <li>
+                The following proves that \(f\) is surjective \(\Rightarrow\) \(f\) is injective.
+                <br>
+                Suppose that \(f\) is not injective. \(\exists\ x, y \in A\), \(x \ne y\) and \(f(x) = f(y)\).
+                Because \(|A| = n\), \(|f[A]| < n\). However, \(f\) is surjective, \(|f[A]| = |B| = n\), which is a contradiction.
+                Therefore, \(f\) is injective.
+            </li>
+        </ul>
+    </li>
+</ul>
+<p class="proofend">\(\blacksquare\)</p>
+
 </div>
 
 <h2>Definition of binary operations</h2>
